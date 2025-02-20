@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Avenir';
+    src: url('Avenir-Light.eot');
+    src: url('Avenir-Light.eot?#iefix') format('embedded-opentype'),
+        url('Avenir-Light.woff2') format('woff2'),
+        url('Avenir-Light.woff') format('woff'),
+        url('Avenir-Light.ttf') format('truetype'),
+        url('Avenir-Light.svg#Avenir-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('Avenir-Roman.eot');
+    src: url('Avenir-Roman.eot?#iefix') format('embedded-opentype'), url('Avenir-Roman.woff2') format('woff2'), url('Avenir-Roman.woff') format('woff'), url('Avenir-Roman.ttf') format('truetype'), url('Avenir-Roman.svg#Avenir-Roman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('Avenir-Medium.eot');
+    src: url('Avenir-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Avenir-Medium.woff2') format('woff2'),
+        url('Avenir-Medium.woff') format('woff'),
+        url('Avenir-Medium.ttf') format('truetype'),
+        url('Avenir-Medium.svg#Avenir-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('Avenir-Heavy.eot');
+    src: url('Avenir-Heavy.eot?#iefix') format('embedded-opentype'), url('Avenir-Heavy.woff2') format('woff2'), url('Avenir-Heavy.woff') format('woff'), url('Avenir-Heavy.ttf') format('truetype'), url('Avenir-Heavy.svg#Avenir-Heavy') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('Avenir-Black.eot');
+    src: url('Avenir-Black.eot?#iefix') format('embedded-opentype'), url('Avenir-Black.woff2') format('woff2'), url('Avenir-Black.woff') format('woff'), url('Avenir-Black.ttf') format('truetype'), url('Avenir-Black.svg#Avenir-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}

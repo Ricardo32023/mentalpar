@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadesigner version="6.5">
+<source>
+<database charset="utf8" collation="utf8_general_ci">softwork_cuestionario</database>
+</source>
+<canvas zoom="100">
+<tables>
+<table name="cargo" view="colnames">
+<left>557</left>
+<top>225</top>
+<width>115</width>
+<height>129</height>
+<sql_create_table>CREATE TABLE `cargo` (
+  `car_cod` int(4) DEFAULT NULL COMMENT 'llave primaria',
+  `car_nombre` varchar(50) DEFAULT NULL COMMENT 'nombre del cargo',
+  `car_estado` varchar(1) DEFAULT 'A'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="contrato_cargo" view="colnames">
+<left>401</left>
+<top>258</top>
+<width>144</width>
+<height>146</height>
+<sql_create_table>CREATE TABLE `contrato_cargo` (
+  `coc_cod` int(4) NOT NULL AUTO_INCREMENT,
+  `coe_cod` int(4) DEFAULT NULL COMMENT 'llave primaria de la tabla contrato_empresa',
+  `car_cod` int(4) DEFAULT NULL COMMENT 'llave primario de la table cargo',
+  `coc_estado` varchar(1) DEFAULT 'A',
+  PRIMARY KEY (`coc_cod`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="contrato_empresa" view="colnames">
+<left>224</left>
+<top>208</top>
+<width>164</width>
+<height>231</height>
+<sql_create_table>CREATE TABLE `contrato_empresa` (
+  `coe_cod` int(4) NOT NULL AUTO_INCREMENT,
+  `emp_cod` int(4) DEFAULT NULL COMMENT 'llave primaria de la tabla empresa',
+  `coe_numerocontrato` varchar(20) DEFAULT NULL,
+  `coe_fechainicio` date DEFAULT NULL,
+  `coe_fechafin` date DEFAULT NULL,
+  `coe_valorcontrato` varchar(20) DEFAULT NULL,
+  `coe_cntencuesta` varchar(10) DEFAULT NULL COMMENT 'cantidad de encuesta a realizar',
+  `coe_cntpersona` varchar(10) DEFAULT NULL COMMENT 'cantidad de persona que se le aplica la encuesta',
+  `coe_estado` varchar(1) DEFAULT 'A',
+  PRIMARY KEY (`coe_cod`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="cuestinario_calificacion" view="colnames">
+<left>372</left>
+<top>21</top>
+<width>175</width>
+<height>163</height>
+<sql_create_table>CREATE TABLE `cuestinario_calificacion` (
+  `cuc_cod` int(4) NOT NULL AUTO_INCREMENT,
+  `cup_cod` int(4) DEFAULT NULL COMMENT 'lave primaria de la tabla cuestionario_pregunta',
+  `res_cod` int(4) DEFAULT NULL COMMENT 'llave primario de la table respuesta',
+  `cuc_valor` int(4) DEFAULT NULL,
+  `cuc_estado` varchar(1) DEFAULT 'A',
+  PRIMARY KEY (`cuc_cod`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="cuestionario" view="colnames">
+<left>17</left>
+<top>27</top>
+<width>137</width>
+<height>146</height>
+<sql_create_table>CREATE TABLE `cuestionario` (
+  `cue_cod` int(4) NOT NULL AUTO_INCREMENT,
+  `cue_nombre` varchar(200) DEFAULT NULL,
+  `cue_descripcion` text,
+  `cue_estado` varchar(1) DEFAULT 'A',
+  PRIMARY KEY (`cue_cod`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="cuestionario_bloque" view="colnames">
+<left>431</left>
+<top>434</top>
+<width>158</width>
+<height>163</height>
+<sql_create_table>CREATE TABLE `cuestionario_bloque` (
+  `cub_cod` int(4) NOT NULL AUTO_INCREMENT,
+  `cue_cod` int(4) DEFAULT NULL COMMENT 'llave primaria de la tabla cuestionario',
+  `cub_bloque` varchar(200) DEFAULT NULL,
+  `cub_descripcion` text,
+  `cub_estado` varchar(1) DEFAULT 'A',
+  PRIMARY KEY (`cub_cod`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="cuestionario_pregunta" view="colnames">
+<left>193</left>
+<top>21</top>
+<width>159</width>
+<height>163</height>
+<sql_create_table>CREATE TABLE `cuestionario_pregunta` (
+  `cup_cod` int(4) NOT NULL AUTO_INCREMENT,
+  `cub_cod` int(4) DEFAULT NULL COMMENT 'llave primaria de la tabla cuestionario_bloque',
+  `cup_pregunta` text,
+  `cup_orden` int(4) DEFAULT NULL COMMENT 'orden de la pregunta en que posicion va',
+  `cup_estado` varchar(1) DEFAULT 'A',
+  PRIMARY KEY (`cup_cod`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="empresa" view="colnames">
+<left>19</left>
+<top>199</top>
+<width>172</width>
+<height>248</height>
+<sql_create_table>CREATE TABLE `empresa` (
+  `emp_cod` int(4) NOT NULL AUTO_INCREMENT COMMENT 'llave primaria tabla empresa',
+  `emp_nit` varchar(12) DEFAULT NULL COMMENT 'nit de la empresa',
+  `emp_digito` varchar(2) DEFAULT NULL COMMENT 'digito de verificacion de la empresa',
+  `emp_razon_social` varchar(200) DEFAULT NULL COMMENT 'razon social de la empresa',
+  `emp_telefono` varchar(60) DEFAULT NULL COMMENT 'telefono de la empresa',
+  `emp_celular` varchar(60) DEFAULT NULL COMMENT 'celular de la empresa',
+  `emp_email` varchar(120) DEFAULT NULL COMMENT 'email de la empresa',
+  `emp_contacto` varchar(200) DEFAULT NULL COMMENT 'contacto de la empresa',
+  `emp_telefonocontacto` varchar(60) DEFAULT NULL COMMENT 'telefono del contacto de la empresa',
+  `epm_estado` varchar(1) DEFAULT 'A' COMMENT 'inactivar registro A activo y I inactivo',
+  PRIMARY KEY (`emp_cod`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="persona" view="colnames">
+<left>21</left>
+<top>464</top>
+<width>164</width>
+<height>248</height>
+<sql_create_table>CREATE TABLE `persona` (
+  `per_cod` int(4) NOT NULL AUTO_INCREMENT COMMENT 'llave primaria autoincren',
+  `per_documento` varchar(18) DEFAULT NULL COMMENT 'documento de la persona',
+  `per_primernombre` varchar(30) DEFAULT NULL COMMENT 'primer nombre',
+  `per_segundonombre` varchar(30) DEFAULT NULL,
+  `per_primerapellido` varchar(30) DEFAULT NULL,
+  `per_segundoapellido` varchar(30) DEFAULT NULL,
+  `per_direccion` varchar(50) DEFAULT NULL,
+  `per_telefono` varchar(40) DEFAULT NULL,
+  `per_email` varchar(120) DEFAULT NULL,
+  `per_estado` varchar(1) DEFAULT 'A' COMMENT 'identificar registros activos e inactivos',
+  PRIMARY KEY (`per_cod`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="persona_contrato" view="colnames">
+<left>241</left>
+<top>615</top>
+<width>163</width>
+<height>146</height>
+<sql_create_table>CREATE TABLE `persona_contrato` (
+  `pec_cod` int(4) NOT NULL AUTO_INCREMENT,
+  `per_cod` int(4) DEFAULT NULL,
+  `coe_cod` int(4) DEFAULT NULL,
+  `pec_estado` varchar(1) DEFAULT 'A',
+  PRIMARY KEY (`pec_cod`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="respuesta" view="colnames">
+<left>558</left>
+<top>33</top>
+<width>115</width>
+<height>129</height>
+<sql_create_table>CREATE TABLE `respuesta` (
+  `res_cod` int(4) NOT NULL AUTO_INCREMENT,
+  `res_nombre` varchar(50) DEFAULT NULL,
+  `res_estado` varchar(1) DEFAULT 'A',
+  PRIMARY KEY (`res_cod`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+<table name="cuestionario_contrato" view="colnames">
+<left>239</left>
+<top>463</top>
+<width>162</width>
+<height>146</height>
+<sql_create_table>CREATE TABLE `cuestionario_contrato` (
+  `cuc_cod` int(4) NOT NULL AUTO_INCREMENT,
+  `coe_cod` int(4) DEFAULT NULL COMMENT 'llave primaria de la tabla contrato_empresa',
+  `cue_cod` int(4) DEFAULT NULL COMMENT 'llave primario de la tabla cuestionario',
+  `cuc_estado` varchar(1) DEFAULT 'A',
+  PRIMARY KEY (`cuc_cod`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8</sql_create_table>
+</table>
+</tables>
+</canvas>
+</schemadesigner>

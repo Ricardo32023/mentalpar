@@ -1,0 +1,55 @@
+var TokenExIframeClient = (function () {
+    function TokenExIframeClient(containerId, config) {
+        var flow = this;
+        var script = document.createElement('script');
+        script.onload = function () {
+            var iframeConfig = {
+                styles: config.styles,
+                pci: true,
+                inputType: "text",
+                enablePrettyFormat: true,
+                debug: false,
+                placeholder: config.placeholder,
+                origin: "https://nexarise.com",
+                timestamp: "20220430235350",
+                tokenExID: "7955771415516041",
+                authenticationKey: "KbMcQCAycN1mS76jP/gOwY3ISLZRl3Z9sO2I66ySKcA=",
+                tokenScheme: "9",
+            };
+            flow.iframe = new TokenEx.Iframe(containerId, iframeConfig);
+            flow.iframe.on("validate", function (data) {
+                console.log("CC iFrame validate:" + JSON.stringify(data));
+                if (!data.isValid && flow.error)
+                    flow.error({ message: "Credit Card Invalid: " + data.validator });
+            });
+            flow.iframe.on("error", function (data) {
+                console.log("CC iFrame error:" + JSON.stringify(data));
+                if (flow.error)
+                    flow.error({ message: data.error });
+            });
+            flow.iframe.on("tokenize", function (data) {
+                console.log("CC iFrame Tokenize:" + JSON.stringify(data));
+                flow.success({ token: data.token.substr(0, 2) + "X" + data.token.substr(2) });
+            });
+            flow.iframe.on("blur", function () {
+                console.log("CC iFrame Change:");
+                if (flow.onChange)
+                    flow.onChange();
+            });
+            flow.iframe.load();
+        };
+        script.src = "https://htp.tokenex.com/Iframe/Iframe-v3.min.js";
+        document.head.appendChild(script);
+    }
+    TokenExIframeClient.prototype.change = function (changeFunction) {
+        var flow = this;
+        flow.onChange = changeFunction;
+    };
+    TokenExIframeClient.prototype.tokenize = function (req) {
+        var flow = this;
+        flow.success = req.success;
+        flow.error = req.error;
+        flow.iframe.tokenize();
+    };
+    return TokenExIframeClient;
+}());

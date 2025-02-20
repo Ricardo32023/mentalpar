@@ -1,0 +1,1099 @@
+O:9:"MagpieRSS":26:{s:6:"parser";i:0;s:12:"current_item";a:0:{}s:5:"items";a:22:{i:0;a:28:{s:6:"title#";i:1;s:5:"title";s:52:"Connecting Google Sheets with Charts 4 PHP framework";s:5:"link#";i:1;s:4:"link";s:54:"http://www.chartphp.com/using-data-from-google-sheets/";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Thu, 28 Jun 2018 05:00:00 +0000";s:2:"dc";a:5:{s:8:"creator#";i:1;s:7:"creator";s:13:"Bilal Siddiqi";s:8:"subject#";i:2;s:7:"subject";s:13:"How-To Guides";s:9:"subject#2";s:7:"Updates";}s:9:"category#";i:2;s:8:"category";s:13:"How-To Guides";s:10:"category#2";s:7:"Updates";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:31:"http://www.chartphp.com/?p=1207";s:12:"description#";i:1;s:11:"description";s:329:"This article will show you how to connect Google Sheets with Charts 4 PHP framework Step 1: Give permission to access Google Spreadsheet Before proceeding to next step make sure that your google sheet have permission to view : Goto your My Driver folder and right click on the spreadsheet you want to share. Then select [&#8230;]";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:3136:"<p>This article will show you how to connect Google Sheets with Charts 4 PHP framework</p>
+<p><strong>Step 1: Give permission to access Google Spreadsheet</strong></p>
+<p>Before proceeding to next step make sure that your google sheet have <em>permission to view</em> :</p>
+<p>Goto your My Driver folder and right click on the spreadsheet you want to share. Then select : <em> &#8220;Anyone with the link can view &#8220;</em>from dropdown .<em> (See screenshots)</em></p>
+<p>&nbsp;</p>
+<p><img class="alignnone wp-image-1221" src="http://www.chartphp.com/wp-content/uploads/shareable1.png" alt="" width="391" height="267" /> <img class="alignnone size-medium wp-image-1226" src="http://www.chartphp.com/wp-content/uploads/shareable2-1.png" alt="" width="300" height="223" /></p>
+<p>&nbsp;</p>
+<p><strong>Step 2: Add your spreadsheet key and sheet name </strong></p>
+<p>Change the key and sheet_name  as given in your spreadsheet with following format :</p>
+<pre><code>https://docs.google.com/spreadsheets/d/{key}/gviz/tq?tqx=out:csv&amp;sheet={sheet_name}</code></pre>
+<p>in our case, after adding key and sheet name, the url becomes:</p>
+<pre><code>https://docs.google.com/spreadsheets/d/1KkNJxvjhpjyzUu-0EW0xmhnYxKN8RPeEqhctxKJkx3s/gviz/tq?tqx=out:csv&amp;sheet=Sheet1</code></pre>
+<p>&nbsp;</p>
+<p><strong>Step 3: Include Charts 4 PHP Library</strong></p>
+<pre><code>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</code></pre>
+<p>&nbsp;</p>
+<p><strong>Step 4: Set your google sheet url in a string </strong></p>
+<p>So finally we have this link (saved in url variable) :</p>
+<pre><code>$url = "https://docs.google.com/spreadsheets/d/1KkNJxvjhpjyzUu-0EW0xmhnYxKN8RPeEqhctxKJkx3s/gviz/tq?tqx=out:csv&amp;sheet=Sheet1";
+$p-&gt;data_csv_url = $url;
+</code></pre>
+<p>In our case-example the sheet is:</p>
+<p><img class="size-full wp-image-1209 aligncenter" src="http://www.chartphp.com/wp-content/uploads/Capture-1.png" alt="" width="514" height="448" /></p>
+<p>&nbsp;</p>
+<p>By default , first column (Downloads) and second column (Week 0) are selected (highlighted above). To make charts from other 2 columns, see <a href="http://www.chartphp.com/docs/">Documentation</a>.</p>
+<p>Also Note that the chart will be made for 2 columns only. More than 2 columns are currently not supported.</p>
+<p><strong>Step 4: Set title for the chart</strong></p>
+<pre><code>$p-&gt;title = "Downloads / Day";
+</code></pre>
+<p><strong>Step 5: Render Chart</strong></p>
+<pre><code>$out = $p-&gt;render("c1");
+</code></pre>
+<p><strong>Result:</strong></p>
+<p><img class="alignnone size-full wp-image-1216" src="http://www.chartphp.com/wp-content/uploads/Capture-2.png" alt="" width="981" height="317" /></p>
+<pre></pre>
+<p>This feature is currently supported in paid version only.</p>
+<h4>Whats Next:</h4>
+<ul>
+<li>To download latest free version (with limited features), please visit our <a title="Download" href="http://www.chartphp.com/download/">Download page</a>.</li>
+<li>For existing paid customers who want to renew/upgrade, please visit <a href="http://www.chartphp.com/upgrade-subscription/">Upgrade page</a>.</li>
+</ul>
+";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:4:"1207";s:8:"summary#";i:1;s:7:"summary";s:329:"This article will show you how to connect Google Sheets with Charts 4 PHP framework Step 1: Give permission to access Google Spreadsheet Before proceeding to next step make sure that your google sheet have permission to view : Goto your My Driver folder and right click on the spreadsheet you want to share. Then select [&#8230;]";s:13:"atom_content#";i:1;s:12:"atom_content";s:3136:"<p>This article will show you how to connect Google Sheets with Charts 4 PHP framework</p>
+<p><strong>Step 1: Give permission to access Google Spreadsheet</strong></p>
+<p>Before proceeding to next step make sure that your google sheet have <em>permission to view</em> :</p>
+<p>Goto your My Driver folder and right click on the spreadsheet you want to share. Then select : <em> &#8220;Anyone with the link can view &#8220;</em>from dropdown .<em> (See screenshots)</em></p>
+<p>&nbsp;</p>
+<p><img class="alignnone wp-image-1221" src="http://www.chartphp.com/wp-content/uploads/shareable1.png" alt="" width="391" height="267" /> <img class="alignnone size-medium wp-image-1226" src="http://www.chartphp.com/wp-content/uploads/shareable2-1.png" alt="" width="300" height="223" /></p>
+<p>&nbsp;</p>
+<p><strong>Step 2: Add your spreadsheet key and sheet name </strong></p>
+<p>Change the key and sheet_name  as given in your spreadsheet with following format :</p>
+<pre><code>https://docs.google.com/spreadsheets/d/{key}/gviz/tq?tqx=out:csv&amp;sheet={sheet_name}</code></pre>
+<p>in our case, after adding key and sheet name, the url becomes:</p>
+<pre><code>https://docs.google.com/spreadsheets/d/1KkNJxvjhpjyzUu-0EW0xmhnYxKN8RPeEqhctxKJkx3s/gviz/tq?tqx=out:csv&amp;sheet=Sheet1</code></pre>
+<p>&nbsp;</p>
+<p><strong>Step 3: Include Charts 4 PHP Library</strong></p>
+<pre><code>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</code></pre>
+<p>&nbsp;</p>
+<p><strong>Step 4: Set your google sheet url in a string </strong></p>
+<p>So finally we have this link (saved in url variable) :</p>
+<pre><code>$url = "https://docs.google.com/spreadsheets/d/1KkNJxvjhpjyzUu-0EW0xmhnYxKN8RPeEqhctxKJkx3s/gviz/tq?tqx=out:csv&amp;sheet=Sheet1";
+$p-&gt;data_csv_url = $url;
+</code></pre>
+<p>In our case-example the sheet is:</p>
+<p><img class="size-full wp-image-1209 aligncenter" src="http://www.chartphp.com/wp-content/uploads/Capture-1.png" alt="" width="514" height="448" /></p>
+<p>&nbsp;</p>
+<p>By default , first column (Downloads) and second column (Week 0) are selected (highlighted above). To make charts from other 2 columns, see <a href="http://www.chartphp.com/docs/">Documentation</a>.</p>
+<p>Also Note that the chart will be made for 2 columns only. More than 2 columns are currently not supported.</p>
+<p><strong>Step 4: Set title for the chart</strong></p>
+<pre><code>$p-&gt;title = "Downloads / Day";
+</code></pre>
+<p><strong>Step 5: Render Chart</strong></p>
+<pre><code>$out = $p-&gt;render("c1");
+</code></pre>
+<p><strong>Result:</strong></p>
+<p><img class="alignnone size-full wp-image-1216" src="http://www.chartphp.com/wp-content/uploads/Capture-2.png" alt="" width="981" height="317" /></p>
+<pre></pre>
+<p>This feature is currently supported in paid version only.</p>
+<h4>Whats Next:</h4>
+<ul>
+<li>To download latest free version (with limited features), please visit our <a title="Download" href="http://www.chartphp.com/download/">Download page</a>.</li>
+<li>For existing paid customers who want to renew/upgrade, please visit <a href="http://www.chartphp.com/upgrade-subscription/">Upgrade page</a>.</li>
+</ul>
+";s:13:"category@term";s:13:"How-To Guides";s:15:"category#2@term";s:7:"Updates";s:14:"date_timestamp";i:1530162000;}i:1;a:26:{s:6:"title#";i:1;s:5:"title";s:24:"KPI Boxes supported now!";s:5:"link#";i:1;s:4:"link";s:48:"http://www.chartphp.com/kpi-boxes-supported-now/";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Mon, 14 May 2018 05:55:26 +0000";s:2:"dc";a:4:{s:8:"creator#";i:1;s:7:"creator";s:3:"Abu";s:8:"subject#";i:1;s:7:"subject";s:7:"Updates";}s:9:"category#";i:1;s:8:"category";s:7:"Updates";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:31:"http://www.chartphp.com/?p=1146";s:12:"description#";i:1;s:11:"description";s:388:"A Key Performance Indicator (KPI) is a measurable value that demonstrates how effectively a company is achieving key business objectives. Organizations use KPIs at multiple levels to evaluate their success at reaching targets.You can now add KPI boxes using Charts4PHP dashboard framework. &#160; Whats Next: To download latest free version (with limited features), please visit [&#8230;]";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:658:"<p>A Key Performance Indicator (KPI) is a measurable value that demonstrates how effectively a company is achieving key business objectives. Organizations use KPIs at multiple levels to evaluate their success at reaching targets.You can now add KPI boxes using Charts4PHP dashboard framework. </p>
+<p>&nbsp;</p>
+<h4>Whats Next:</h4>
+<ul>
+<li>To download latest free version (with limited features), please visit our <a title="Download" href="http://www.chartphp.com/download/">Download page</a>.</li>
+<li>For existing paid customers who want to renew/upgrade, please visit <a href="http://www.chartphp.com/upgrade-subscription/">Upgrade page</a>.</li>
+</ul>
+";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:4:"1146";s:8:"summary#";i:1;s:7:"summary";s:388:"A Key Performance Indicator (KPI) is a measurable value that demonstrates how effectively a company is achieving key business objectives. Organizations use KPIs at multiple levels to evaluate their success at reaching targets.You can now add KPI boxes using Charts4PHP dashboard framework. &#160; Whats Next: To download latest free version (with limited features), please visit [&#8230;]";s:13:"atom_content#";i:1;s:12:"atom_content";s:658:"<p>A Key Performance Indicator (KPI) is a measurable value that demonstrates how effectively a company is achieving key business objectives. Organizations use KPIs at multiple levels to evaluate their success at reaching targets.You can now add KPI boxes using Charts4PHP dashboard framework. </p>
+<p>&nbsp;</p>
+<h4>Whats Next:</h4>
+<ul>
+<li>To download latest free version (with limited features), please visit our <a title="Download" href="http://www.chartphp.com/download/">Download page</a>.</li>
+<li>For existing paid customers who want to renew/upgrade, please visit <a href="http://www.chartphp.com/upgrade-subscription/">Upgrade page</a>.</li>
+</ul>
+";s:13:"category@term";s:7:"Updates";s:14:"date_timestamp";i:1526277326;}i:2;a:26:{s:6:"title#";i:1;s:5:"title";s:51:"Added Line Bar combination chart with multiple axis";s:5:"link#";i:1;s:4:"link";s:65:"http://www.chartphp.com/line-bar-combination-chart-multiple-axis/";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Mon, 07 May 2018 05:16:34 +0000";s:2:"dc";a:4:{s:8:"creator#";i:1;s:7:"creator";s:9:"Sauz Khan";s:8:"subject#";i:1;s:7:"subject";s:7:"Updates";}s:9:"category#";i:1;s:8:"category";s:7:"Updates";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:31:"http://www.chartphp.com/?p=1151";s:12:"description#";i:1;s:11:"description";s:350:"As Charts4PHP is now supporting combination chart, you can now create the line and bar combination chart to show multiple values against a single axis range or plots multiple sets of data on a single chart. Refer documentation for more information and usage. Whats Next: To download latest free version (with limited features), please visit [&#8230;]";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:666:"<p>As Charts4PHP is now supporting combination chart, you can now create the line and bar combination chart to show multiple values against a single axis range or plots multiple sets of data on a single chart.</p>
+<p>Refer <a href="http://www.chartphp.com/docs/">documentation </a>for more information and usage.</p>
+<p><h4>Whats Next:</h4>
+<ul>
+<li>To download latest free version (with limited features), please visit our <a title="Download" href="http://www.chartphp.com/download/">Download page</a>.</li>
+<li>For existing paid customers who want to renew/upgrade, please visit <a href="http://www.chartphp.com/upgrade-subscription/">Upgrade page</a>.</li>
+</ul>
+";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:4:"1151";s:8:"summary#";i:1;s:7:"summary";s:350:"As Charts4PHP is now supporting combination chart, you can now create the line and bar combination chart to show multiple values against a single axis range or plots multiple sets of data on a single chart. Refer documentation for more information and usage. Whats Next: To download latest free version (with limited features), please visit [&#8230;]";s:13:"atom_content#";i:1;s:12:"atom_content";s:666:"<p>As Charts4PHP is now supporting combination chart, you can now create the line and bar combination chart to show multiple values against a single axis range or plots multiple sets of data on a single chart.</p>
+<p>Refer <a href="http://www.chartphp.com/docs/">documentation </a>for more information and usage.</p>
+<p><h4>Whats Next:</h4>
+<ul>
+<li>To download latest free version (with limited features), please visit our <a title="Download" href="http://www.chartphp.com/download/">Download page</a>.</li>
+<li>For existing paid customers who want to renew/upgrade, please visit <a href="http://www.chartphp.com/upgrade-subscription/">Upgrade page</a>.</li>
+</ul>
+";s:13:"category@term";s:7:"Updates";s:14:"date_timestamp";i:1525670194;}i:3;a:26:{s:6:"title#";i:1;s:5:"title";s:66:"Creating a Line Bar combination chart with multiple axis using PHP";s:5:"link#";i:1;s:4:"link";s:78:"http://www.chartphp.com/creating-line-bar-combination-chart-multiple-axis-php/";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Mon, 07 May 2018 05:10:20 +0000";s:2:"dc";a:4:{s:8:"creator#";i:1;s:7:"creator";s:9:"Sauz Khan";s:8:"subject#";i:1;s:7:"subject";s:13:"How-To Guides";}s:9:"category#";i:1;s:8:"category";s:13:"How-To Guides";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:31:"http://www.chartphp.com/?p=1145";s:12:"description#";i:1;s:11:"description";s:584:"Its easy to create a line-bar combination chart in chartphp with multiple axis support. Step 1: Include Charts 4 PHP Library include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); Step 2: Configure Data array $linebar_bar_data = array( array( array("Jan",80.25), array("Feb",138.75), array("Mar",185.50), array("Apr",370.50), array("May",266.80), array("Jun",350), array("Jul",245), array("Aug",129), array("Sep",490), array("Oct",323), array("Nov",255), array("Dec",450)) ); $linebar_line_data = array( array( array("Jan",145), array("Feb",129), array("Mar",190), [&#8230;]";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:1415:"<p>Its easy to create a line-bar combination chart in chartphp with multiple axis support.</p>
+<p><a href="http://www.chartphp.com/wp-content/uploads/combination-chart.png"><img class="alignnone wp-image-1179 size-full" src="http://www.chartphp.com/wp-content/uploads/combination-chart.png" alt="" width="1500" height="473" /></a></p>
+<p>Step 1: Include Charts 4 PHP Library</p>
+<pre><code>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();</code></pre>
+<p>Step 2: Configure Data array</p>
+<pre><code>$linebar_bar_data =
+array(
+array(
+array("Jan",80.25),
+array("Feb",138.75),
+array("Mar",185.50),
+array("Apr",370.50),
+array("May",266.80),
+array("Jun",350),
+array("Jul",245),
+array("Aug",129),
+array("Sep",490),
+array("Oct",323),
+array("Nov",255),
+array("Dec",450))
+);
+
+$linebar_line_data =
+array(
+array(
+array("Jan",145),
+array("Feb",129),
+array("Mar",190),
+array("Apr",323),
+array("May",285),
+array("Jun",250),
+array("Jul",245),
+array("Aug",129),
+array("Sep",450),
+array("Oct",412),
+array("Nov",185),
+array("Dec",490))
+);
+
+$p-&gt;data = array($linebar_bar_data, $linebar_line_data) ;
+</code></pre>
+<p>Step 3: Set Chart type</p>
+<pre><code>$p-&gt;chart_type = "line-bar";</code></pre>
+<p>Step 4: Render Chart</p>
+<pre><code>$out = $p-&gt;render("c1");</code></pre>
+<p>For complete code, please visit our <a href="http://www.chartphp.com/demo/">demo center</a>.</p>
+";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:4:"1145";s:8:"summary#";i:1;s:7:"summary";s:584:"Its easy to create a line-bar combination chart in chartphp with multiple axis support. Step 1: Include Charts 4 PHP Library include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); Step 2: Configure Data array $linebar_bar_data = array( array( array("Jan",80.25), array("Feb",138.75), array("Mar",185.50), array("Apr",370.50), array("May",266.80), array("Jun",350), array("Jul",245), array("Aug",129), array("Sep",490), array("Oct",323), array("Nov",255), array("Dec",450)) ); $linebar_line_data = array( array( array("Jan",145), array("Feb",129), array("Mar",190), [&#8230;]";s:13:"atom_content#";i:1;s:12:"atom_content";s:1415:"<p>Its easy to create a line-bar combination chart in chartphp with multiple axis support.</p>
+<p><a href="http://www.chartphp.com/wp-content/uploads/combination-chart.png"><img class="alignnone wp-image-1179 size-full" src="http://www.chartphp.com/wp-content/uploads/combination-chart.png" alt="" width="1500" height="473" /></a></p>
+<p>Step 1: Include Charts 4 PHP Library</p>
+<pre><code>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();</code></pre>
+<p>Step 2: Configure Data array</p>
+<pre><code>$linebar_bar_data =
+array(
+array(
+array("Jan",80.25),
+array("Feb",138.75),
+array("Mar",185.50),
+array("Apr",370.50),
+array("May",266.80),
+array("Jun",350),
+array("Jul",245),
+array("Aug",129),
+array("Sep",490),
+array("Oct",323),
+array("Nov",255),
+array("Dec",450))
+);
+
+$linebar_line_data =
+array(
+array(
+array("Jan",145),
+array("Feb",129),
+array("Mar",190),
+array("Apr",323),
+array("May",285),
+array("Jun",250),
+array("Jul",245),
+array("Aug",129),
+array("Sep",450),
+array("Oct",412),
+array("Nov",185),
+array("Dec",490))
+);
+
+$p-&gt;data = array($linebar_bar_data, $linebar_line_data) ;
+</code></pre>
+<p>Step 3: Set Chart type</p>
+<pre><code>$p-&gt;chart_type = "line-bar";</code></pre>
+<p>Step 4: Render Chart</p>
+<pre><code>$out = $p-&gt;render("c1");</code></pre>
+<p>For complete code, please visit our <a href="http://www.chartphp.com/demo/">demo center</a>.</p>
+";s:13:"category@term";s:13:"How-To Guides";s:14:"date_timestamp";i:1525669820;}i:4;a:26:{s:6:"title#";i:1;s:5:"title";s:23:"New Dashboard Templates";s:5:"link#";i:1;s:4:"link";s:50:"http://www.chartphp.com/admin-dashboard-templates/";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Mon, 30 Apr 2018 05:30:25 +0000";s:2:"dc";a:4:{s:8:"creator#";i:1;s:7:"creator";s:3:"Abu";s:8:"subject#";i:1;s:7:"subject";s:7:"Updates";}s:9:"category#";i:1;s:8:"category";s:7:"Updates";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:31:"http://www.chartphp.com/?p=1147";s:12:"description#";i:1;s:11:"description";s:415:"We recently added Chats4PHP pre-integrated Dashboard Templates to quick-start building your corporate business dashboard in no time. It contains usage demos of how to use static &#38; database driven charts in dashboard templates. These Bootstrap templates support variety of features like theme customization, colors and graphical elements. &#160; ADMIN-LTE ELA-ADMIN ADMIN-BSB NOTE: Dashboard Themes are [&#8230;]";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:1548:"<p>We recently added Chats4PHP pre-integrated Dashboard Templates to quick-start building your corporate business dashboard in no time. It contains usage demos of how to use static &amp; database driven charts in dashboard templates. These Bootstrap templates support variety of features like theme customization, colors and graphical elements.</p>
+<p>&nbsp;</p>
+<h3>ADMIN-LTE</h3>
+<p><a href="http://www.chartphp.com/wp-content/uploads/dash-1.png"><img class="alignnone size-full wp-image-1160" src="http://www.chartphp.com/wp-content/uploads/dash-1.png" alt="" width="1930" height="964" /></a></p>
+<h3></h3>
+<h3>ELA-ADMIN</h3>
+<p><a href="http://www.chartphp.com/wp-content/uploads/dash-2.png"><img class="alignnone size-full wp-image-1158" src="http://www.chartphp.com/wp-content/uploads/dash-2.png" alt="" width="1930" height="940" /></a></p>
+<h3></h3>
+<h3>ADMIN-BSB</h3>
+<p><a href="http://www.chartphp.com/wp-content/uploads/dash-3.png"><img class="alignnone size-full wp-image-1159" src="http://www.chartphp.com/wp-content/uploads/dash-3.png" alt="" width="1928" height="892" /></a></p>
+<p><strong>NOTE: </strong>Dashboard Themes are currently packaged with paid version only.</p>
+<p>&nbsp;</p>
+<h4>Whats Next:</h4>
+<ul>
+<li>To download latest free version (with limited features), please visit our <a title="Download" href="http://www.chartphp.com/download/">Download page</a>.</li>
+<li>For existing paid customers who want to renew/upgrade, please visit <a href="http://www.chartphp.com/upgrade-subscription/">Upgrade page</a>.</li>
+</ul>
+";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:4:"1147";s:8:"summary#";i:1;s:7:"summary";s:415:"We recently added Chats4PHP pre-integrated Dashboard Templates to quick-start building your corporate business dashboard in no time. It contains usage demos of how to use static &#38; database driven charts in dashboard templates. These Bootstrap templates support variety of features like theme customization, colors and graphical elements. &#160; ADMIN-LTE ELA-ADMIN ADMIN-BSB NOTE: Dashboard Themes are [&#8230;]";s:13:"atom_content#";i:1;s:12:"atom_content";s:1548:"<p>We recently added Chats4PHP pre-integrated Dashboard Templates to quick-start building your corporate business dashboard in no time. It contains usage demos of how to use static &amp; database driven charts in dashboard templates. These Bootstrap templates support variety of features like theme customization, colors and graphical elements.</p>
+<p>&nbsp;</p>
+<h3>ADMIN-LTE</h3>
+<p><a href="http://www.chartphp.com/wp-content/uploads/dash-1.png"><img class="alignnone size-full wp-image-1160" src="http://www.chartphp.com/wp-content/uploads/dash-1.png" alt="" width="1930" height="964" /></a></p>
+<h3></h3>
+<h3>ELA-ADMIN</h3>
+<p><a href="http://www.chartphp.com/wp-content/uploads/dash-2.png"><img class="alignnone size-full wp-image-1158" src="http://www.chartphp.com/wp-content/uploads/dash-2.png" alt="" width="1930" height="940" /></a></p>
+<h3></h3>
+<h3>ADMIN-BSB</h3>
+<p><a href="http://www.chartphp.com/wp-content/uploads/dash-3.png"><img class="alignnone size-full wp-image-1159" src="http://www.chartphp.com/wp-content/uploads/dash-3.png" alt="" width="1928" height="892" /></a></p>
+<p><strong>NOTE: </strong>Dashboard Themes are currently packaged with paid version only.</p>
+<p>&nbsp;</p>
+<h4>Whats Next:</h4>
+<ul>
+<li>To download latest free version (with limited features), please visit our <a title="Download" href="http://www.chartphp.com/download/">Download page</a>.</li>
+<li>For existing paid customers who want to renew/upgrade, please visit <a href="http://www.chartphp.com/upgrade-subscription/">Upgrade page</a>.</li>
+</ul>
+";s:13:"category@term";s:7:"Updates";s:14:"date_timestamp";i:1525066225;}i:5;a:26:{s:6:"title#";i:1;s:5:"title";s:47:"Added support for transparent background Charts";s:5:"link#";i:1;s:4:"link";s:54:"http://www.chartphp.com/transparent-background-charts/";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Thu, 19 Apr 2018 07:11:52 +0000";s:2:"dc";a:4:{s:8:"creator#";i:1;s:7:"creator";s:3:"Abu";s:8:"subject#";i:1;s:7:"subject";s:7:"Updates";}s:9:"category#";i:1;s:8:"category";s:7:"Updates";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:31:"http://www.chartphp.com/?p=1120";s:12:"description#";i:1;s:11:"description";s:397:"With transparent background charts, you can now create much more attractive dashboards by specifying your favorite background image. Charts will become full transparent or translucent based on your configuration. For usage, you can simply set bgcolor property and theme property. Refer documentation for more. $p-&#62;bgcolor = &#8220;transparent&#8221;; // no bg color, you can also set [&#8230;]";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:1144:"<p>With transparent background charts, you can now create much more attractive dashboards by specifying your favorite background image. Charts will become full transparent or translucent based on your configuration.</p>
+<p><a href="http://www.chartphp.com/wp-content/uploads/dark-dashboard.png"><img class="alignnone size-full wp-image-1122" src="http://www.chartphp.com/wp-content/uploads/dark-dashboard.png" alt="" width="1603" height="839" /></a></p>
+<p>For usage, you can simply set bgcolor property and theme property. Refer <a href="http://www.chartphp.com/docs/">documentation</a> for more.</p>
+<p>$p-&gt;bgcolor = &#8220;transparent&#8221;; // no bg color, you can also set rgba(r,g,b,alpha)<br />
+$p-&gt;theme = &#8220;dark&#8221;; // white text theme or &#8220;light&#8221;</p>
+<h4></h4>
+<h4>Whats Next:</h4>
+<ul>
+<li>To download latest free version (with limited features), please visit our <a title="Download" href="http://www.chartphp.com/download/">Download page</a>.</li>
+<li>For existing paid customers who want to renew/upgrade, please visit <a href="http://www.chartphp.com/upgrade-subscription/">Upgrade page</a>.</li>
+</ul>
+";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:4:"1120";s:8:"summary#";i:1;s:7:"summary";s:397:"With transparent background charts, you can now create much more attractive dashboards by specifying your favorite background image. Charts will become full transparent or translucent based on your configuration. For usage, you can simply set bgcolor property and theme property. Refer documentation for more. $p-&#62;bgcolor = &#8220;transparent&#8221;; // no bg color, you can also set [&#8230;]";s:13:"atom_content#";i:1;s:12:"atom_content";s:1144:"<p>With transparent background charts, you can now create much more attractive dashboards by specifying your favorite background image. Charts will become full transparent or translucent based on your configuration.</p>
+<p><a href="http://www.chartphp.com/wp-content/uploads/dark-dashboard.png"><img class="alignnone size-full wp-image-1122" src="http://www.chartphp.com/wp-content/uploads/dark-dashboard.png" alt="" width="1603" height="839" /></a></p>
+<p>For usage, you can simply set bgcolor property and theme property. Refer <a href="http://www.chartphp.com/docs/">documentation</a> for more.</p>
+<p>$p-&gt;bgcolor = &#8220;transparent&#8221;; // no bg color, you can also set rgba(r,g,b,alpha)<br />
+$p-&gt;theme = &#8220;dark&#8221;; // white text theme or &#8220;light&#8221;</p>
+<h4></h4>
+<h4>Whats Next:</h4>
+<ul>
+<li>To download latest free version (with limited features), please visit our <a title="Download" href="http://www.chartphp.com/download/">Download page</a>.</li>
+<li>For existing paid customers who want to renew/upgrade, please visit <a href="http://www.chartphp.com/upgrade-subscription/">Upgrade page</a>.</li>
+</ul>
+";s:13:"category@term";s:7:"Updates";s:14:"date_timestamp";i:1524121912;}i:6;a:26:{s:6:"title#";i:1;s:5:"title";s:18:"Dark Theme Support";s:5:"link#";i:1;s:4:"link";s:43:"http://www.chartphp.com/dark-theme-support/";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Sat, 03 Mar 2018 20:00:31 +0000";s:2:"dc";a:4:{s:8:"creator#";i:1;s:7:"creator";s:3:"Abu";s:8:"subject#";i:1;s:7:"subject";s:7:"Updates";}s:9:"category#";i:1;s:8:"category";s:7:"Updates";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:30:"http://www.chartphp.com/?p=942";s:12:"description#";i:1;s:11:"description";s:347:"We&#8217;ve added great looking dark theme support in our charts. You can now switch between light/dark theme with simple settings. Here are few screenshots: &#160; Whats Next: To download latest free version (with limited features), please visit our Download page. For existing paid customers who want to renew/upgrade, please visit Upgrade page.";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:1211:"<p>We&#8217;ve added great looking dark theme support in our charts. You can now switch between light/dark theme with simple settings. Here are few screenshots:</p>
+<p><a href="http://www.chartphp.com/wp-content/uploads/dark-line.png"><img class="alignnone size-full wp-image-1107" src="http://www.chartphp.com/wp-content/uploads/dark-line.png" alt="" width="1510" height="495" /></a></p>
+<p><a href="http://www.chartphp.com/wp-content/uploads/dark-bar.png"><img class="alignnone size-full wp-image-1109" src="http://www.chartphp.com/wp-content/uploads/dark-bar.png" alt="" width="1512" height="499" /></a></p>
+<p><a href="http://www.chartphp.com/wp-content/uploads/dark-heatmap.png"><img class="alignnone size-full wp-image-1110" src="http://www.chartphp.com/wp-content/uploads/dark-heatmap.png" alt="" width="1510" height="496" /></a></p>
+<h4></h4>
+<p>&nbsp;</p>
+<h4>Whats Next:</h4>
+<ul>
+<li>To download latest free version (with limited features), please visit our <a title="Download" href="http://www.chartphp.com/download/">Download page</a>.</li>
+<li>For existing paid customers who want to renew/upgrade, please visit <a href="http://www.chartphp.com/upgrade-subscription/">Upgrade page</a>.</li>
+</ul>
+";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:3:"942";s:8:"summary#";i:1;s:7:"summary";s:347:"We&#8217;ve added great looking dark theme support in our charts. You can now switch between light/dark theme with simple settings. Here are few screenshots: &#160; Whats Next: To download latest free version (with limited features), please visit our Download page. For existing paid customers who want to renew/upgrade, please visit Upgrade page.";s:13:"atom_content#";i:1;s:12:"atom_content";s:1211:"<p>We&#8217;ve added great looking dark theme support in our charts. You can now switch between light/dark theme with simple settings. Here are few screenshots:</p>
+<p><a href="http://www.chartphp.com/wp-content/uploads/dark-line.png"><img class="alignnone size-full wp-image-1107" src="http://www.chartphp.com/wp-content/uploads/dark-line.png" alt="" width="1510" height="495" /></a></p>
+<p><a href="http://www.chartphp.com/wp-content/uploads/dark-bar.png"><img class="alignnone size-full wp-image-1109" src="http://www.chartphp.com/wp-content/uploads/dark-bar.png" alt="" width="1512" height="499" /></a></p>
+<p><a href="http://www.chartphp.com/wp-content/uploads/dark-heatmap.png"><img class="alignnone size-full wp-image-1110" src="http://www.chartphp.com/wp-content/uploads/dark-heatmap.png" alt="" width="1510" height="496" /></a></p>
+<h4></h4>
+<p>&nbsp;</p>
+<h4>Whats Next:</h4>
+<ul>
+<li>To download latest free version (with limited features), please visit our <a title="Download" href="http://www.chartphp.com/download/">Download page</a>.</li>
+<li>For existing paid customers who want to renew/upgrade, please visit <a href="http://www.chartphp.com/upgrade-subscription/">Upgrade page</a>.</li>
+</ul>
+";s:13:"category@term";s:7:"Updates";s:14:"date_timestamp";i:1520107231;}i:7;a:26:{s:6:"title#";i:1;s:5:"title";s:35:"Charts4PHP & CodeIgniter Quickstart";s:5:"link#";i:1;s:4:"link";s:58:"http://www.chartphp.com/charts4php-codeigniter-quickstart/";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Fri, 23 Feb 2018 20:55:22 +0000";s:2:"dc";a:4:{s:8:"creator#";i:1;s:7:"creator";s:3:"Abu";s:8:"subject#";i:1;s:7:"subject";s:7:"Updates";}s:9:"category#";i:1;s:8:"category";s:7:"Updates";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:30:"http://www.chartphp.com/?p=926";s:12:"description#";i:1;s:11:"description";s:374:"We&#8217;ve added a tutorial on how to use Charts4PHP with CodeIgnitor framework. &#160; Transcription &#8211; I&#8217;m going to show you how to integrate Charts4php with Codeigniter framework. &#8211; And to save time i&#8217;ve downloaded CI3 here. &#8211; Next step is to download Charts4PHP. It comes with free version and a paid version. Paid version support [&#8230;]";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:2425:"<p>We&#8217;ve added a tutorial on how to use Charts4PHP with CodeIgnitor framework.</p>
+<div style="width: 1080px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
+<video class="wp-video-shortcode" id="video-926-1" width="1080" height="579" preload="metadata" controls="controls"><source type="video/youtube" src="https://youtu.be/qBwCS8LGmbI?_=1" /><a href="https://youtu.be/qBwCS8LGmbI">https://youtu.be/qBwCS8LGmbI</a></video></div>
+<p>&nbsp;</p>
+<p><strong>Transcription</strong><br />
+&#8211; I&#8217;m going to show you how to integrate Charts4php with Codeigniter framework.<br />
+&#8211; And to save time i&#8217;ve downloaded CI3 here.<br />
+&#8211; Next step is to download Charts4PHP. It comes with free version and a paid version. Paid version support far more features and visualization charts.<br />
+&#8211; When we extract charts4php, there is a &#8216;lib&#8217; folder in it. It contains all our required files. &#8216;inc&#8217; folder contains PHP library files. &#8216;js&#8217; and &#8216;img&#8217; are static files.<br />
+&#8211; So to integrate, we will move &#8216;inc&#8217; folder in &#8216;application/third_party&#8217; folder inside applications folder of CI as &#8216;chartphp&#8217;.<br />
+&#8211; And move the static files in a newly created folder &#8216;public/chartphp&#8217;<br />
+&#8211; Now we can jump to controller of CI. It comes with a default controller file &#8216;Welcome&#8217;. So we&#8217;ll be using this to show our chart.<br />
+&#8211; Saving time, i&#8217;ll copy the chartphp code from the line demo. We&#8217;ll put the PHP code in controller and move the HTML part in view.<br />
+&#8211; We will need to adjust the chartphp_dist.php where i placed it in CI.<br />
+&#8211; That&#8217;s all from controller. Now pass the $out variable to view.<br />
+&#8211; In view, we&#8217;ll include our static files with our included path and finally echo the passed variable where we need to show chart.<br />
+&#8211; That&#8217;s all.</p>
+<p>You can download complete code from:<br />
+<a href="http://www.chartphp.com/demo/ci3-charts4php.zip" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://www.chartphp.com/demo/ci3-charts4php.zip&amp;source=gmail&amp;ust=1518640545905000&amp;usg=AFQjCNHmWRLBVoUGhEgc08ZYmvqzGyD8gw">http://www.chartphp.com/demo/<wbr />ci3-charts4php.zip</a></p>
+";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:3:"926";s:8:"summary#";i:1;s:7:"summary";s:374:"We&#8217;ve added a tutorial on how to use Charts4PHP with CodeIgnitor framework. &#160; Transcription &#8211; I&#8217;m going to show you how to integrate Charts4php with Codeigniter framework. &#8211; And to save time i&#8217;ve downloaded CI3 here. &#8211; Next step is to download Charts4PHP. It comes with free version and a paid version. Paid version support [&#8230;]";s:13:"atom_content#";i:1;s:12:"atom_content";s:2425:"<p>We&#8217;ve added a tutorial on how to use Charts4PHP with CodeIgnitor framework.</p>
+<div style="width: 1080px;" class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
+<video class="wp-video-shortcode" id="video-926-1" width="1080" height="579" preload="metadata" controls="controls"><source type="video/youtube" src="https://youtu.be/qBwCS8LGmbI?_=1" /><a href="https://youtu.be/qBwCS8LGmbI">https://youtu.be/qBwCS8LGmbI</a></video></div>
+<p>&nbsp;</p>
+<p><strong>Transcription</strong><br />
+&#8211; I&#8217;m going to show you how to integrate Charts4php with Codeigniter framework.<br />
+&#8211; And to save time i&#8217;ve downloaded CI3 here.<br />
+&#8211; Next step is to download Charts4PHP. It comes with free version and a paid version. Paid version support far more features and visualization charts.<br />
+&#8211; When we extract charts4php, there is a &#8216;lib&#8217; folder in it. It contains all our required files. &#8216;inc&#8217; folder contains PHP library files. &#8216;js&#8217; and &#8216;img&#8217; are static files.<br />
+&#8211; So to integrate, we will move &#8216;inc&#8217; folder in &#8216;application/third_party&#8217; folder inside applications folder of CI as &#8216;chartphp&#8217;.<br />
+&#8211; And move the static files in a newly created folder &#8216;public/chartphp&#8217;<br />
+&#8211; Now we can jump to controller of CI. It comes with a default controller file &#8216;Welcome&#8217;. So we&#8217;ll be using this to show our chart.<br />
+&#8211; Saving time, i&#8217;ll copy the chartphp code from the line demo. We&#8217;ll put the PHP code in controller and move the HTML part in view.<br />
+&#8211; We will need to adjust the chartphp_dist.php where i placed it in CI.<br />
+&#8211; That&#8217;s all from controller. Now pass the $out variable to view.<br />
+&#8211; In view, we&#8217;ll include our static files with our included path and finally echo the passed variable where we need to show chart.<br />
+&#8211; That&#8217;s all.</p>
+<p>You can download complete code from:<br />
+<a href="http://www.chartphp.com/demo/ci3-charts4php.zip" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://www.chartphp.com/demo/ci3-charts4php.zip&amp;source=gmail&amp;ust=1518640545905000&amp;usg=AFQjCNHmWRLBVoUGhEgc08ZYmvqzGyD8gw">http://www.chartphp.com/demo/<wbr />ci3-charts4php.zip</a></p>
+";s:13:"category@term";s:7:"Updates";s:14:"date_timestamp";i:1519419322;}i:8;a:26:{s:6:"title#";i:1;s:5:"title";s:30:"Creating a Pie Chart using PHP";s:5:"link#";i:1;s:4:"link";s:52:"http://www.chartphp.com/how-to-create-pie-chart-php/";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Tue, 13 Feb 2018 20:05:39 +0000";s:2:"dc";a:4:{s:8:"creator#";i:1;s:7:"creator";s:5:"Shani";s:8:"subject#";i:1;s:7:"subject";s:13:"How-To Guides";}s:9:"category#";i:1;s:8:"category";s:13:"How-To Guides";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:30:"http://www.chartphp.com/?p=551";s:12:"description#";i:1;s:11:"description";s:427:"This article will show how to create a simple pie chart using Charts 4 PHP Framework. Step 1: Include Charts 4 PHP Library include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); Step 2: Configure Data array $p-&#62;data = array(array( array('Heavy Industry', 12), array('Retail', 9), array('Light Industry', 14), array('Out of home', 16), array('Commuting', 7), array('Orientation', 9) )); Step 3: Set Chart [&#8230;]";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:874:"<p>This article will show how to create a simple pie chart using Charts 4 PHP Framework.</p>
+<p><strong>Step 1: Include Charts 4 PHP Library</strong></p>
+<pre><code>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</code></pre>
+<p><strong>Step 2: Configure Data array</strong></p>
+<pre><code>$p-&gt;data = array(array(
+array('Heavy Industry', 12),
+array('Retail', 9), 
+array('Light Industry', 14), 
+array('Out of home', 16),
+array('Commuting', 7), 
+array('Orientation', 9)
+));
+</code></pre>
+<p><strong>Step 3: Set Chart type</strong></p>
+<pre><code>$p-&gt;chart_type = "pie";
+</code></pre>
+<p><strong>Step 4: Render Chart</strong></p>
+<pre><code>$out = $p-&gt;render("c1");
+</code></pre>
+<p>For complete code, please visit live <a title="Line Chart" href="http://www.chartphp.com/demo/#basic/pie.php" target="_blank" rel="noopener">demo</a>.</p>
+";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:3:"551";s:8:"summary#";i:1;s:7:"summary";s:427:"This article will show how to create a simple pie chart using Charts 4 PHP Framework. Step 1: Include Charts 4 PHP Library include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); Step 2: Configure Data array $p-&#62;data = array(array( array('Heavy Industry', 12), array('Retail', 9), array('Light Industry', 14), array('Out of home', 16), array('Commuting', 7), array('Orientation', 9) )); Step 3: Set Chart [&#8230;]";s:13:"atom_content#";i:1;s:12:"atom_content";s:874:"<p>This article will show how to create a simple pie chart using Charts 4 PHP Framework.</p>
+<p><strong>Step 1: Include Charts 4 PHP Library</strong></p>
+<pre><code>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</code></pre>
+<p><strong>Step 2: Configure Data array</strong></p>
+<pre><code>$p-&gt;data = array(array(
+array('Heavy Industry', 12),
+array('Retail', 9), 
+array('Light Industry', 14), 
+array('Out of home', 16),
+array('Commuting', 7), 
+array('Orientation', 9)
+));
+</code></pre>
+<p><strong>Step 3: Set Chart type</strong></p>
+<pre><code>$p-&gt;chart_type = "pie";
+</code></pre>
+<p><strong>Step 4: Render Chart</strong></p>
+<pre><code>$out = $p-&gt;render("c1");
+</code></pre>
+<p>For complete code, please visit live <a title="Line Chart" href="http://www.chartphp.com/demo/#basic/pie.php" target="_blank" rel="noopener">demo</a>.</p>
+";s:13:"category@term";s:13:"How-To Guides";s:14:"date_timestamp";i:1518552339;}i:9;a:26:{s:6:"title#";i:1;s:5:"title";s:32:"Creating a Donut Chart using PHP";s:5:"link#";i:1;s:4:"link";s:54:"http://www.chartphp.com/how-to-create-donut-chart-php/";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Tue, 13 Feb 2018 20:00:35 +0000";s:2:"dc";a:4:{s:8:"creator#";i:1;s:7:"creator";s:5:"Shani";s:8:"subject#";i:1;s:7:"subject";s:13:"How-To Guides";}s:9:"category#";i:1;s:8:"category";s:13:"How-To Guides";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:30:"http://www.chartphp.com/?p=547";s:12:"description#";i:1;s:11:"description";s:438:"This article will show how to create a simple donut chart using Charts 4 PHP Framework. Step 1: Include Charts 4 PHP Library include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); Step 2: Configure Data array $p-&#62;data = array(array( array('Mango',6), array('Apple',8), array('Kiwi',14), array('Pear',20) )); Step 3: Set Chart type $p-&#62;chart_type = "donut"; Step 4: Render Chart $out = $p-&#62;render("c1"); For [&#8230;]";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:823:"<p>This article will show how to create a simple donut chart using Charts 4 PHP Framework.</p>
+<p><strong>Step 1: Include Charts 4 PHP Library</strong></p>
+<pre><code>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</code></pre>
+<p><strong>Step 2: Configure Data array</strong></p>
+<pre><code>$p-&gt;data = array(array(
+					array('Mango',6), 
+					array('Apple',8), 
+					array('Kiwi',14), 
+					array('Pear',20)
+					));
+</code></pre>
+<p><strong>Step 3: Set Chart type</strong></p>
+<pre><code>$p-&gt;chart_type = "donut";
+</code></pre>
+<p><strong>Step 4: Render Chart</strong></p>
+<pre><code>$out = $p-&gt;render("c1");
+</code></pre>
+<p>For complete code, please visit live <a title="Line Chart" href="http://www.chartphp.com/demo/#basic/donut.php" target="_blank" rel="noopener">demo</a>.</p>
+";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:3:"547";s:8:"summary#";i:1;s:7:"summary";s:438:"This article will show how to create a simple donut chart using Charts 4 PHP Framework. Step 1: Include Charts 4 PHP Library include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); Step 2: Configure Data array $p-&#62;data = array(array( array('Mango',6), array('Apple',8), array('Kiwi',14), array('Pear',20) )); Step 3: Set Chart type $p-&#62;chart_type = "donut"; Step 4: Render Chart $out = $p-&#62;render("c1"); For [&#8230;]";s:13:"atom_content#";i:1;s:12:"atom_content";s:823:"<p>This article will show how to create a simple donut chart using Charts 4 PHP Framework.</p>
+<p><strong>Step 1: Include Charts 4 PHP Library</strong></p>
+<pre><code>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</code></pre>
+<p><strong>Step 2: Configure Data array</strong></p>
+<pre><code>$p-&gt;data = array(array(
+					array('Mango',6), 
+					array('Apple',8), 
+					array('Kiwi',14), 
+					array('Pear',20)
+					));
+</code></pre>
+<p><strong>Step 3: Set Chart type</strong></p>
+<pre><code>$p-&gt;chart_type = "donut";
+</code></pre>
+<p><strong>Step 4: Render Chart</strong></p>
+<pre><code>$out = $p-&gt;render("c1");
+</code></pre>
+<p>For complete code, please visit live <a title="Line Chart" href="http://www.chartphp.com/demo/#basic/donut.php" target="_blank" rel="noopener">demo</a>.</p>
+";s:13:"category@term";s:13:"How-To Guides";s:14:"date_timestamp";i:1518552035;}i:10;a:26:{s:6:"title#";i:1;s:5:"title";s:30:"Creating a Bar Chart using PHP";s:5:"link#";i:1;s:4:"link";s:52:"http://www.chartphp.com/how-to-create-bar-chart-php/";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Tue, 13 Feb 2018 19:51:24 +0000";s:2:"dc";a:4:{s:8:"creator#";i:1;s:7:"creator";s:5:"Shani";s:8:"subject#";i:1;s:7:"subject";s:13:"How-To Guides";}s:9:"category#";i:1;s:8:"category";s:13:"How-To Guides";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:30:"http://www.chartphp.com/?p=538";s:12:"description#";i:1;s:11:"description";s:507:"This article will show how to create a simple bar chart using Charts 4 PHP Framework. Step 1: Include Charts 4 PHP Library include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); Step 2: Configure Data array $p->data = array( array( array("2010/12",48.25), array("2011/01",238.75), array("2011/02",95.50), array("2011/03",300.50), array("2011/04",286.80), array("2011/05",148.25), array("2011/06",128.75), array("2011/07",95.50) ) ); Step 3: Set Chart type $p->chart_type = "bar"; Step 4: [&#8230;]";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:918:"<p>This article will show how to create a simple bar chart using Charts 4 PHP Framework.</p>
+<p><strong>Step 1: Include Charts 4 PHP Library</strong></p>
+<pre><code>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</code></pre>
+<p><strong>Step 2: Configure Data array</strong></p>
+<pre><code>$p->data = array(
+	array(
+		array("2010/12",48.25),
+		array("2011/01",238.75),
+		array("2011/02",95.50),
+		array("2011/03",300.50),
+		array("2011/04",286.80),
+		array("2011/05",148.25),
+		array("2011/06",128.75),
+		array("2011/07",95.50)
+		)
+	);
+</code></pre>
+<p><strong>Step 3: Set Chart type</strong></p>
+<pre><code>$p->chart_type = "bar";
+</code></pre>
+<p><strong>Step 4: Render Chart</strong></p>
+<pre><code>$out = $p->render("c1");
+</code></pre>
+<p>For complete code, please visit live <a title="Line Chart" href="http://www.chartphp.com/demo/#basic/bar.php" target="_blank">demo</a>.</p>
+";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:3:"538";s:8:"summary#";i:1;s:7:"summary";s:507:"This article will show how to create a simple bar chart using Charts 4 PHP Framework. Step 1: Include Charts 4 PHP Library include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); Step 2: Configure Data array $p->data = array( array( array("2010/12",48.25), array("2011/01",238.75), array("2011/02",95.50), array("2011/03",300.50), array("2011/04",286.80), array("2011/05",148.25), array("2011/06",128.75), array("2011/07",95.50) ) ); Step 3: Set Chart type $p->chart_type = "bar"; Step 4: [&#8230;]";s:13:"atom_content#";i:1;s:12:"atom_content";s:918:"<p>This article will show how to create a simple bar chart using Charts 4 PHP Framework.</p>
+<p><strong>Step 1: Include Charts 4 PHP Library</strong></p>
+<pre><code>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</code></pre>
+<p><strong>Step 2: Configure Data array</strong></p>
+<pre><code>$p->data = array(
+	array(
+		array("2010/12",48.25),
+		array("2011/01",238.75),
+		array("2011/02",95.50),
+		array("2011/03",300.50),
+		array("2011/04",286.80),
+		array("2011/05",148.25),
+		array("2011/06",128.75),
+		array("2011/07",95.50)
+		)
+	);
+</code></pre>
+<p><strong>Step 3: Set Chart type</strong></p>
+<pre><code>$p->chart_type = "bar";
+</code></pre>
+<p><strong>Step 4: Render Chart</strong></p>
+<pre><code>$out = $p->render("c1");
+</code></pre>
+<p>For complete code, please visit live <a title="Line Chart" href="http://www.chartphp.com/demo/#basic/bar.php" target="_blank">demo</a>.</p>
+";s:13:"category@term";s:13:"How-To Guides";s:14:"date_timestamp";i:1518551484;}i:11;a:26:{s:6:"title#";i:1;s:5:"title";s:32:"Creating an Area Chart using PHP";s:5:"link#";i:1;s:4:"link";s:53:"http://www.chartphp.com/how-to-create-area-chart-php/";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Tue, 13 Feb 2018 19:45:52 +0000";s:2:"dc";a:4:{s:8:"creator#";i:1;s:7:"creator";s:5:"Shani";s:8:"subject#";i:1;s:7:"subject";s:13:"How-To Guides";}s:9:"category#";i:1;s:8:"category";s:13:"How-To Guides";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:30:"http://www.chartphp.com/?p=535";s:12:"description#";i:1;s:11:"description";s:555:"This article will show how to create a simple area chart using Charts 4 PHP Framework. Step 1: Include Charts 4 PHP Library include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); Step 2: Configure Data array $p-&#62;data = array( array( array("Jan",348.25), array("Feb",338.75), array("Mar",395.50), array("Apr",330.50), array("May",326.80), array("Jun",400)), array( array("Jan",300.25), array("Feb",225.75), array("Mar",440.50), array("Apr",259.50), array("May",350.80), array("Jun",360)) ); Step 3: Set Chart type $p-&#62;chart_type [&#8230;]";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:1014:"<p>This article will show how to create a simple area chart using Charts 4 PHP Framework.</p>
+<p><strong>Step 1: Include Charts 4 PHP Library</strong></p>
+<pre><code>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</code></pre>
+<p><strong>Step 2: Configure Data array</strong></p>
+<pre><code>$p-&gt;data = array(
+	array(
+		array("Jan",348.25),
+		array("Feb",338.75),
+		array("Mar",395.50),
+		array("Apr",330.50),
+		array("May",326.80),
+		array("Jun",400)),
+	array(	
+		array("Jan",300.25),
+		array("Feb",225.75),
+		array("Mar",440.50),
+		array("Apr",259.50),
+		array("May",350.80),
+		array("Jun",360))	
+	);
+</code></pre>
+<p><strong>Step 3: Set Chart type</strong></p>
+<pre><code>$p-&gt;chart_type = "area";
+</code></pre>
+<p><strong>Step 4: Render Chart</strong></p>
+<pre><code>$out = $p-&gt;render("c1");
+</code></pre>
+<p>For complete code, please visit live <a title="Line Chart" href="http://www.chartphp.com/demo/#basic/area.php" target="_blank" rel="noopener">demo</a>.</p>
+";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:3:"535";s:8:"summary#";i:1;s:7:"summary";s:555:"This article will show how to create a simple area chart using Charts 4 PHP Framework. Step 1: Include Charts 4 PHP Library include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); Step 2: Configure Data array $p-&#62;data = array( array( array("Jan",348.25), array("Feb",338.75), array("Mar",395.50), array("Apr",330.50), array("May",326.80), array("Jun",400)), array( array("Jan",300.25), array("Feb",225.75), array("Mar",440.50), array("Apr",259.50), array("May",350.80), array("Jun",360)) ); Step 3: Set Chart type $p-&#62;chart_type [&#8230;]";s:13:"atom_content#";i:1;s:12:"atom_content";s:1014:"<p>This article will show how to create a simple area chart using Charts 4 PHP Framework.</p>
+<p><strong>Step 1: Include Charts 4 PHP Library</strong></p>
+<pre><code>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</code></pre>
+<p><strong>Step 2: Configure Data array</strong></p>
+<pre><code>$p-&gt;data = array(
+	array(
+		array("Jan",348.25),
+		array("Feb",338.75),
+		array("Mar",395.50),
+		array("Apr",330.50),
+		array("May",326.80),
+		array("Jun",400)),
+	array(	
+		array("Jan",300.25),
+		array("Feb",225.75),
+		array("Mar",440.50),
+		array("Apr",259.50),
+		array("May",350.80),
+		array("Jun",360))	
+	);
+</code></pre>
+<p><strong>Step 3: Set Chart type</strong></p>
+<pre><code>$p-&gt;chart_type = "area";
+</code></pre>
+<p><strong>Step 4: Render Chart</strong></p>
+<pre><code>$out = $p-&gt;render("c1");
+</code></pre>
+<p>For complete code, please visit live <a title="Line Chart" href="http://www.chartphp.com/demo/#basic/area.php" target="_blank" rel="noopener">demo</a>.</p>
+";s:13:"category@term";s:13:"How-To Guides";s:14:"date_timestamp";i:1518551152;}i:12;a:26:{s:6:"title#";i:1;s:5:"title";s:44:"Custom Branding: Add your own Logo to Charts";s:5:"link#";i:1;s:4:"link";s:56:"http://www.chartphp.com/custom-branding-add-logo-charts/";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Tue, 13 Feb 2018 19:05:36 +0000";s:2:"dc";a:4:{s:8:"creator#";i:1;s:7:"creator";s:3:"Abu";s:8:"subject#";i:1;s:7:"subject";s:7:"Updates";}s:9:"category#";i:1;s:8:"category";s:7:"Updates";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:30:"http://www.chartphp.com/?p=888";s:12:"description#";i:1;s:11:"description";s:0:"";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:1482:"<div class="et_pb_section  et_pb_section_0 et_section_regular">
+				
+				
+					
+					<div class=" et_pb_row et_pb_row_0">
+				
+				
+				<div class="et_pb_column et_pb_column_4_4  et_pb_column_0">
+				
+				
+				<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_0">
+				
+				
+				<div class="et_pb_text_inner">
+					
+<p>You can now add custom logo to your charts and position them at corners. You can also adjust transparency of the brand logo.</p>
+<p>You can adjust logo positions to:</p>
+<ul>
+<li>Top Left</li>
+<li>Top Right</li>
+<li>Bottom Left</li>
+<li>Bottom Right</li>
+<li>Center</li>
+</ul>
+<p>and set logo image transparency between (0-1). 1 means full opaque.</p>
+<h4>Code Sample</h4>
+<p><code>$p = new chartphp();<br />
+...<br />
+$p-&gt;logo["source"] = "https://raw.githubusercontent.com/cldougl/plot_images/add_r_img/accuweather.jpeg";<br />
+$p-&gt;logo["position"] = "top-right";<br />
+$p-&gt;logo["transparency"] = 1</code></p>
+<h4></h4>
+<h4>Whats Next:</h4>
+<ul>
+<li>To download latest free version (with limited features), please visit our <a title="Download" href="http://www.chartphp.com/download/">Download page</a>.</li>
+<li>For existing paid customers who want to renew/upgrade, please visit <a href="http://www.chartphp.com/upgrade-subscription/">Upgrade page</a>.</li>
+</ul>
+
+				</div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+			</div> <!-- .et_pb_row -->
+				
+			</div> <!-- .et_pb_section -->
+";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:3:"888";s:8:"summary#";i:1;s:7:"summary";s:0:"";s:13:"atom_content#";i:1;s:12:"atom_content";s:1482:"<div class="et_pb_section  et_pb_section_0 et_section_regular">
+				
+				
+					
+					<div class=" et_pb_row et_pb_row_0">
+				
+				
+				<div class="et_pb_column et_pb_column_4_4  et_pb_column_0">
+				
+				
+				<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left  et_pb_text_0">
+				
+				
+				<div class="et_pb_text_inner">
+					
+<p>You can now add custom logo to your charts and position them at corners. You can also adjust transparency of the brand logo.</p>
+<p>You can adjust logo positions to:</p>
+<ul>
+<li>Top Left</li>
+<li>Top Right</li>
+<li>Bottom Left</li>
+<li>Bottom Right</li>
+<li>Center</li>
+</ul>
+<p>and set logo image transparency between (0-1). 1 means full opaque.</p>
+<h4>Code Sample</h4>
+<p><code>$p = new chartphp();<br />
+...<br />
+$p-&gt;logo["source"] = "https://raw.githubusercontent.com/cldougl/plot_images/add_r_img/accuweather.jpeg";<br />
+$p-&gt;logo["position"] = "top-right";<br />
+$p-&gt;logo["transparency"] = 1</code></p>
+<h4></h4>
+<h4>Whats Next:</h4>
+<ul>
+<li>To download latest free version (with limited features), please visit our <a title="Download" href="http://www.chartphp.com/download/">Download page</a>.</li>
+<li>For existing paid customers who want to renew/upgrade, please visit <a href="http://www.chartphp.com/upgrade-subscription/">Upgrade page</a>.</li>
+</ul>
+
+				</div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column -->
+			</div> <!-- .et_pb_row -->
+				
+			</div> <!-- .et_pb_section -->
+";s:13:"category@term";s:7:"Updates";s:14:"date_timestamp";i:1518548736;}i:13;a:26:{s:6:"title#";i:1;s:5:"title";s:31:"Creating a Line Chart using PHP";s:5:"link#";i:1;s:4:"link";s:53:"http://www.chartphp.com/how-to-create-line-chart-php/";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Tue, 13 Feb 2018 11:49:30 +0000";s:2:"dc";a:4:{s:8:"creator#";i:1;s:7:"creator";s:3:"Abu";s:8:"subject#";i:1;s:7:"subject";s:13:"How-To Guides";}s:9:"category#";i:1;s:8:"category";s:13:"How-To Guides";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:30:"http://www.chartphp.com/?p=519";s:12:"description#";i:1;s:11:"description";s:552:"This article will show how to create a simple line chart using Charts 4 PHP Framework. Step 1: Include Charts 4 PHP Library include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); Step 2: Configure Data array $p-&#62;data = array( array( array("Jan",48.25), array("Feb",238.75), array("Mar",95.50), array("Apr",300.50), array("May",286.80), array("Jun",400)), array( array("Jan",300.25), array("Feb",225.75), array("Mar",44.50), array("Apr",259.50), array("May",250.80), array("Jun",300)) ); Step 3: Set Chart type $p-&#62;chart_type [&#8230;]";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:982:"<p>This article will show how to create a simple line chart using Charts 4 PHP Framework.</p>
+<p><strong>Step 1: Include Charts 4 PHP Library</strong></p>
+<pre><code>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</code></pre>
+<p><strong>Step 2: Configure Data array</strong></p>
+<pre><code>$p-&gt;data = array(
+array(
+array("Jan",48.25),
+array("Feb",238.75),
+array("Mar",95.50),
+array("Apr",300.50),
+array("May",286.80),
+array("Jun",400)),
+array(
+array("Jan",300.25),
+array("Feb",225.75),
+array("Mar",44.50),
+array("Apr",259.50),
+array("May",250.80),
+array("Jun",300))
+);
+</code></pre>
+<p><strong>Step 3: Set Chart type</strong></p>
+<pre><code>$p-&gt;chart_type = "line";
+</code></pre>
+<p><strong>Step 4: Render Chart</strong></p>
+<pre><code>$out = $p-&gt;render("c1");
+</code></pre>
+<p>For complete code, please visit live <a title="Line Chart" href="http://www.chartphp.com/demo/#basic/line.php" target="_blank" rel="noopener">demo</a>.</p>
+";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:3:"519";s:8:"summary#";i:1;s:7:"summary";s:552:"This article will show how to create a simple line chart using Charts 4 PHP Framework. Step 1: Include Charts 4 PHP Library include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); Step 2: Configure Data array $p-&#62;data = array( array( array("Jan",48.25), array("Feb",238.75), array("Mar",95.50), array("Apr",300.50), array("May",286.80), array("Jun",400)), array( array("Jan",300.25), array("Feb",225.75), array("Mar",44.50), array("Apr",259.50), array("May",250.80), array("Jun",300)) ); Step 3: Set Chart type $p-&#62;chart_type [&#8230;]";s:13:"atom_content#";i:1;s:12:"atom_content";s:982:"<p>This article will show how to create a simple line chart using Charts 4 PHP Framework.</p>
+<p><strong>Step 1: Include Charts 4 PHP Library</strong></p>
+<pre><code>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</code></pre>
+<p><strong>Step 2: Configure Data array</strong></p>
+<pre><code>$p-&gt;data = array(
+array(
+array("Jan",48.25),
+array("Feb",238.75),
+array("Mar",95.50),
+array("Apr",300.50),
+array("May",286.80),
+array("Jun",400)),
+array(
+array("Jan",300.25),
+array("Feb",225.75),
+array("Mar",44.50),
+array("Apr",259.50),
+array("May",250.80),
+array("Jun",300))
+);
+</code></pre>
+<p><strong>Step 3: Set Chart type</strong></p>
+<pre><code>$p-&gt;chart_type = "line";
+</code></pre>
+<p><strong>Step 4: Render Chart</strong></p>
+<pre><code>$out = $p-&gt;render("c1");
+</code></pre>
+<p>For complete code, please visit live <a title="Line Chart" href="http://www.chartphp.com/demo/#basic/line.php" target="_blank" rel="noopener">demo</a>.</p>
+";s:13:"category@term";s:13:"How-To Guides";s:14:"date_timestamp";i:1518522570;}i:14;a:26:{s:6:"title#";i:1;s:5:"title";s:40:"Creating a Line Chart using mySQL in PHP";s:5:"link#";i:1;s:4:"link";s:59:"http://www.chartphp.com/how-to-create-line-chart-mysql-php/";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Sat, 10 Feb 2018 07:05:18 +0000";s:2:"dc";a:4:{s:8:"creator#";i:1;s:7:"creator";s:5:"Shani";s:8:"subject#";i:1;s:7:"subject";s:13:"How-To Guides";}s:9:"category#";i:1;s:8:"category";s:13:"How-To Guides";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:30:"http://www.chartphp.com/?p=635";s:12:"description#";i:1;s:11:"description";s:588:"This article will show how to create a mySQL driven line chart using Charts 4 PHP Framework. Step 1: Configure Database connectivity in config.php define("CHARTPHP_DBTYPE","pdo"); define("CHARTPHP_DBHOST","mysql:host=localhost;dbname=testdb"); define("CHARTPHP_DBUSER","username"); define("CHARTPHP_DBPASS","password"); define("CHARTPHP_DBNAME",""); Step 2: Include Charts 4 PHP Library include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); Step 3: Configure Data array using jQuery to fetch data from Database $p-&#62;data_sql = "select strftime('%Y-%m',o.orderdate) [&#8230;]";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:1326:"<p>This article will show how to create a mySQL driven line chart using Charts 4 PHP Framework.</p>
+<p><strong>Step 1: Configure Database connectivity in config.php</strong></p>
+<pre>define("CHARTPHP_DBTYPE","pdo");
+define("CHARTPHP_DBHOST","mysql:host=localhost;dbname=testdb");
+define("CHARTPHP_DBUSER","username");
+define("CHARTPHP_DBPASS","password");
+define("CHARTPHP_DBNAME","");
+</pre>
+<p><strong>Step 2: Include Charts 4 PHP Library</strong></p>
+<pre>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</pre>
+<p><strong>Step 3: Configure Data array using jQuery to fetch data from Database</strong></p>
+<pre>$p-&gt;data_sql = "select strftime('%Y-%m',o.orderdate) as Year, sum(d.quantity) as Sales 
+                    from `order details` d, orders o 
+                    where o.orderid = d.orderid 
+                    group by strftime('%Y-%m',o.orderdate) limit 50";
+</pre>
+<p><strong>Step 4: Set Chart type</strong></p>
+<pre>$p-&gt;chart_type = "line";
+$p-&gt;xlabel = "Month";
+$p-&gt;ylabel = "Sales";
+$p-&gt;shape = "linear";
+</pre>
+<p><strong>Step 5: Render Chart</strong></p>
+<pre>$out = $p-&gt;render("c1");
+</pre>
+<p>For complete code, please visit live <a title="Line Chart" href="http://www.chartphp.com/demo/#database/line.php" target="_blank" rel="noopener">demo</a>.</p>
+";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:3:"635";s:8:"summary#";i:1;s:7:"summary";s:588:"This article will show how to create a mySQL driven line chart using Charts 4 PHP Framework. Step 1: Configure Database connectivity in config.php define("CHARTPHP_DBTYPE","pdo"); define("CHARTPHP_DBHOST","mysql:host=localhost;dbname=testdb"); define("CHARTPHP_DBUSER","username"); define("CHARTPHP_DBPASS","password"); define("CHARTPHP_DBNAME",""); Step 2: Include Charts 4 PHP Library include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); Step 3: Configure Data array using jQuery to fetch data from Database $p-&#62;data_sql = "select strftime('%Y-%m',o.orderdate) [&#8230;]";s:13:"atom_content#";i:1;s:12:"atom_content";s:1326:"<p>This article will show how to create a mySQL driven line chart using Charts 4 PHP Framework.</p>
+<p><strong>Step 1: Configure Database connectivity in config.php</strong></p>
+<pre>define("CHARTPHP_DBTYPE","pdo");
+define("CHARTPHP_DBHOST","mysql:host=localhost;dbname=testdb");
+define("CHARTPHP_DBUSER","username");
+define("CHARTPHP_DBPASS","password");
+define("CHARTPHP_DBNAME","");
+</pre>
+<p><strong>Step 2: Include Charts 4 PHP Library</strong></p>
+<pre>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</pre>
+<p><strong>Step 3: Configure Data array using jQuery to fetch data from Database</strong></p>
+<pre>$p-&gt;data_sql = "select strftime('%Y-%m',o.orderdate) as Year, sum(d.quantity) as Sales 
+                    from `order details` d, orders o 
+                    where o.orderid = d.orderid 
+                    group by strftime('%Y-%m',o.orderdate) limit 50";
+</pre>
+<p><strong>Step 4: Set Chart type</strong></p>
+<pre>$p-&gt;chart_type = "line";
+$p-&gt;xlabel = "Month";
+$p-&gt;ylabel = "Sales";
+$p-&gt;shape = "linear";
+</pre>
+<p><strong>Step 5: Render Chart</strong></p>
+<pre>$out = $p-&gt;render("c1");
+</pre>
+<p>For complete code, please visit live <a title="Line Chart" href="http://www.chartphp.com/demo/#database/line.php" target="_blank" rel="noopener">demo</a>.</p>
+";s:13:"category@term";s:13:"How-To Guides";s:14:"date_timestamp";i:1518246318;}i:15;a:26:{s:6:"title#";i:1;s:5:"title";s:39:"Creating a Bar Chart using mySQL in PHP";s:5:"link#";i:1;s:4:"link";s:53:"http://www.chartphp.com/creating-bar-chart-mysql-php/";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Fri, 09 Feb 2018 19:00:47 +0000";s:2:"dc";a:4:{s:8:"creator#";i:1;s:7:"creator";s:5:"Shani";s:8:"subject#";i:1;s:7:"subject";s:13:"How-To Guides";}s:9:"category#";i:1;s:8:"category";s:13:"How-To Guides";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:30:"http://www.chartphp.com/?p=687";s:12:"description#";i:1;s:11:"description";s:589:"This article will show how to create a mySQL driven bar chart using Charts 4 PHP Framework. Step 1: Configure Database connectivity in config.php define("CHARTPHP_DBTYPE","pdo"); define("CHARTPHP_DBHOST","mysql:host=localhost;dbname=testdb"); define("CHARTPHP_DBUSER","username"); define("CHARTPHP_DBPASS","password"); define("CHARTPHP_DBNAME",""); Step 2: Include Charts 4 PHP Library include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); Step 3: Configure Data array using jQuery to fetch data from Database $p-&#62;data_sql = "select c.categoryname, sum(a.quantity) [&#8230;]";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:1318:"<p>This article will show how to create a mySQL driven bar chart using Charts 4 PHP Framework.</p>
+<p><strong>Step 1: Configure Database connectivity in config.php</strong></p>
+<pre>define("CHARTPHP_DBTYPE","pdo");
+define("CHARTPHP_DBHOST","mysql:host=localhost;dbname=testdb");
+define("CHARTPHP_DBUSER","username");
+define("CHARTPHP_DBPASS","password");
+define("CHARTPHP_DBNAME","");
+</pre>
+<p><strong>Step 2: Include Charts 4 PHP Library</strong></p>
+<pre>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</pre>
+<p><strong>Step 3: Configure Data array using jQuery to fetch data from Database</strong></p>
+<pre>$p-&gt;data_sql = "select c.categoryname, sum(a.quantity) as 'Sales 1997', sum(a.quantity)+1000 as 'Sales 1998'
+                from products b, `order details` a, categories c
+                where a.productid = b.productid and c.categoryid = b.categoryid
+                group by c.categoryid
+                order by c.categoryid"; 
+</pre>
+<p><strong>Step 4: Set Chart type</strong></p>
+<pre>$p-&gt;chart_type = "bar";
+</pre>
+<p><strong>Step 5: Render Chart</strong></p>
+<pre>$out = $p-&gt;render("c1");
+</pre>
+<p>For complete code, please visit live <a title="Line Chart" href="http://www.chartphp.com/demo/#database/bar.php" target="_blank" rel="noopener">demo</a>.</p>
+";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:3:"687";s:8:"summary#";i:1;s:7:"summary";s:589:"This article will show how to create a mySQL driven bar chart using Charts 4 PHP Framework. Step 1: Configure Database connectivity in config.php define("CHARTPHP_DBTYPE","pdo"); define("CHARTPHP_DBHOST","mysql:host=localhost;dbname=testdb"); define("CHARTPHP_DBUSER","username"); define("CHARTPHP_DBPASS","password"); define("CHARTPHP_DBNAME",""); Step 2: Include Charts 4 PHP Library include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); Step 3: Configure Data array using jQuery to fetch data from Database $p-&#62;data_sql = "select c.categoryname, sum(a.quantity) [&#8230;]";s:13:"atom_content#";i:1;s:12:"atom_content";s:1318:"<p>This article will show how to create a mySQL driven bar chart using Charts 4 PHP Framework.</p>
+<p><strong>Step 1: Configure Database connectivity in config.php</strong></p>
+<pre>define("CHARTPHP_DBTYPE","pdo");
+define("CHARTPHP_DBHOST","mysql:host=localhost;dbname=testdb");
+define("CHARTPHP_DBUSER","username");
+define("CHARTPHP_DBPASS","password");
+define("CHARTPHP_DBNAME","");
+</pre>
+<p><strong>Step 2: Include Charts 4 PHP Library</strong></p>
+<pre>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</pre>
+<p><strong>Step 3: Configure Data array using jQuery to fetch data from Database</strong></p>
+<pre>$p-&gt;data_sql = "select c.categoryname, sum(a.quantity) as 'Sales 1997', sum(a.quantity)+1000 as 'Sales 1998'
+                from products b, `order details` a, categories c
+                where a.productid = b.productid and c.categoryid = b.categoryid
+                group by c.categoryid
+                order by c.categoryid"; 
+</pre>
+<p><strong>Step 4: Set Chart type</strong></p>
+<pre>$p-&gt;chart_type = "bar";
+</pre>
+<p><strong>Step 5: Render Chart</strong></p>
+<pre>$out = $p-&gt;render("c1");
+</pre>
+<p>For complete code, please visit live <a title="Line Chart" href="http://www.chartphp.com/demo/#database/bar.php" target="_blank" rel="noopener">demo</a>.</p>
+";s:13:"category@term";s:13:"How-To Guides";s:14:"date_timestamp";i:1518202847;}i:16;a:26:{s:6:"title#";i:1;s:5:"title";s:20:"Database Integration";s:5:"link#";i:1;s:4:"link";s:45:"http://www.chartphp.com/database-integration/";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Fri, 09 Feb 2018 14:41:28 +0000";s:2:"dc";a:4:{s:8:"creator#";i:1;s:7:"creator";s:5:"Shani";s:8:"subject#";i:1;s:7:"subject";s:7:"Updates";}s:9:"category#";i:1;s:8:"category";s:7:"Updates";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:30:"http://www.chartphp.com/?p=311";s:12:"description#";i:1;s:11:"description";s:781:"Greetings everyone! As promised, new exciting features are bundled in this release! Now you can integrate database with your charts using simple sql query. Read more to learn about basic steps to integrate database below. First Step is to set database configuration in config.php. To connect to MySqli: define(&#8220;CHARTPHP_DBTYPE&#8221;,&#8221;mysqli&#8221;); define(&#8220;CHARTPHP_DBHOST&#8221;,&#8221;localhost&#8221;); define(&#8220;CHARTPHP_DBUSER&#8221;,&#8221;user&#8221;); define(&#8220;CHARTPHP_DBPASS&#8221;,&#8221;pass&#8221;); define(&#8220;CHARTPHP_DBNAME&#8221;,&#8221;northwind&#8221;); To connect using PDO: define(&#8220;CHARTPHP_DBTYPE&#8221;,&#8221;pdo&#8221;); define(&#8220;CHARTPHP_DBHOST&#8221;,&#8221;sqlite:../../sampledb/Northwind.db&#8221;); [&#8230;]";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:2227:"<p>Greetings everyone!</p>
+<p>As promised, new exciting features are bundled in this release! Now you can integrate database with your charts using simple sql query. Read more to learn about basic steps to integrate database below.</p>
+<p>First Step is to set database configuration in config.php.</p>
+<p>To connect to MySqli:</p>
+<blockquote><p>define(&#8220;CHARTPHP_DBTYPE&#8221;,&#8221;mysqli&#8221;);<br />
+define(&#8220;CHARTPHP_DBHOST&#8221;,&#8221;localhost&#8221;);<br />
+define(&#8220;CHARTPHP_DBUSER&#8221;,&#8221;user&#8221;);<br />
+define(&#8220;CHARTPHP_DBPASS&#8221;,&#8221;pass&#8221;);<br />
+define(&#8220;CHARTPHP_DBNAME&#8221;,&#8221;northwind&#8221;);</p></blockquote>
+<p>To connect using PDO:</p>
+<blockquote><p>define(&#8220;CHARTPHP_DBTYPE&#8221;,&#8221;pdo&#8221;);<br />
+define(&#8220;CHARTPHP_DBHOST&#8221;,&#8221;sqlite:../../sampledb/Northwind.db&#8221;);<br />
+define(&#8220;CHARTPHP_DBUSER&#8221;,&#8221;&#8221;);<br />
+define(&#8220;CHARTPHP_DBPASS&#8221;,&#8221;&#8221;);<br />
+define(&#8220;CHARTPHP_DBNAME&#8221;,&#8221;&#8221;);</p></blockquote>
+<p>Next is to include configuration file in your code.</p>
+<blockquote><p>include(&#8220;../../config.php&#8221;);</p></blockquote>
+<p>Final Step is to define data_sql property, that will load data points from database.</p>
+<blockquote><p>$p-&gt;data_sql = &#8220;select c.categoryname, sum(a.quantity) as &#8216;Sales 1997&#8217;, sum(a.quantity)+1000 as &#8216;Sales 1998&#8217;<br />
+from products b, `order details` a, categories c<br />
+where a.productid = b.productid and c.categoryid = b.categoryid<br />
+group by c.categoryid<br />
+order by c.categoryid&#8221;</p></blockquote>
+<p>And the result &#8230;</p>
+<p><a href="http://www.chartphp.com/wp-content/uploads/bar-group.png"><img class="alignnone  wp-image-923" src="http://www.chartphp.com/wp-content/uploads/bar-group.png" alt="" width="695" height="304" /></a></p>
+<h4 id="resources-1"><span id="Resources-2">Resources</span></h4>
+<ul>
+<li><a href="http://www.chartphp.com/demo/demos/database/bar.php">Live demo</a></li>
+<li><a href="http://www.chartphp.com/demo/demos/database/bar.phps">Source Code</a></li>
+<li>You can check this demo in archive demos/database/bar.php</li>
+</ul>
+";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:3:"311";s:8:"summary#";i:1;s:7:"summary";s:781:"Greetings everyone! As promised, new exciting features are bundled in this release! Now you can integrate database with your charts using simple sql query. Read more to learn about basic steps to integrate database below. First Step is to set database configuration in config.php. To connect to MySqli: define(&#8220;CHARTPHP_DBTYPE&#8221;,&#8221;mysqli&#8221;); define(&#8220;CHARTPHP_DBHOST&#8221;,&#8221;localhost&#8221;); define(&#8220;CHARTPHP_DBUSER&#8221;,&#8221;user&#8221;); define(&#8220;CHARTPHP_DBPASS&#8221;,&#8221;pass&#8221;); define(&#8220;CHARTPHP_DBNAME&#8221;,&#8221;northwind&#8221;); To connect using PDO: define(&#8220;CHARTPHP_DBTYPE&#8221;,&#8221;pdo&#8221;); define(&#8220;CHARTPHP_DBHOST&#8221;,&#8221;sqlite:../../sampledb/Northwind.db&#8221;); [&#8230;]";s:13:"atom_content#";i:1;s:12:"atom_content";s:2227:"<p>Greetings everyone!</p>
+<p>As promised, new exciting features are bundled in this release! Now you can integrate database with your charts using simple sql query. Read more to learn about basic steps to integrate database below.</p>
+<p>First Step is to set database configuration in config.php.</p>
+<p>To connect to MySqli:</p>
+<blockquote><p>define(&#8220;CHARTPHP_DBTYPE&#8221;,&#8221;mysqli&#8221;);<br />
+define(&#8220;CHARTPHP_DBHOST&#8221;,&#8221;localhost&#8221;);<br />
+define(&#8220;CHARTPHP_DBUSER&#8221;,&#8221;user&#8221;);<br />
+define(&#8220;CHARTPHP_DBPASS&#8221;,&#8221;pass&#8221;);<br />
+define(&#8220;CHARTPHP_DBNAME&#8221;,&#8221;northwind&#8221;);</p></blockquote>
+<p>To connect using PDO:</p>
+<blockquote><p>define(&#8220;CHARTPHP_DBTYPE&#8221;,&#8221;pdo&#8221;);<br />
+define(&#8220;CHARTPHP_DBHOST&#8221;,&#8221;sqlite:../../sampledb/Northwind.db&#8221;);<br />
+define(&#8220;CHARTPHP_DBUSER&#8221;,&#8221;&#8221;);<br />
+define(&#8220;CHARTPHP_DBPASS&#8221;,&#8221;&#8221;);<br />
+define(&#8220;CHARTPHP_DBNAME&#8221;,&#8221;&#8221;);</p></blockquote>
+<p>Next is to include configuration file in your code.</p>
+<blockquote><p>include(&#8220;../../config.php&#8221;);</p></blockquote>
+<p>Final Step is to define data_sql property, that will load data points from database.</p>
+<blockquote><p>$p-&gt;data_sql = &#8220;select c.categoryname, sum(a.quantity) as &#8216;Sales 1997&#8217;, sum(a.quantity)+1000 as &#8216;Sales 1998&#8217;<br />
+from products b, `order details` a, categories c<br />
+where a.productid = b.productid and c.categoryid = b.categoryid<br />
+group by c.categoryid<br />
+order by c.categoryid&#8221;</p></blockquote>
+<p>And the result &#8230;</p>
+<p><a href="http://www.chartphp.com/wp-content/uploads/bar-group.png"><img class="alignnone  wp-image-923" src="http://www.chartphp.com/wp-content/uploads/bar-group.png" alt="" width="695" height="304" /></a></p>
+<h4 id="resources-1"><span id="Resources-2">Resources</span></h4>
+<ul>
+<li><a href="http://www.chartphp.com/demo/demos/database/bar.php">Live demo</a></li>
+<li><a href="http://www.chartphp.com/demo/demos/database/bar.phps">Source Code</a></li>
+<li>You can check this demo in archive demos/database/bar.php</li>
+</ul>
+";s:13:"category@term";s:7:"Updates";s:14:"date_timestamp";i:1518187288;}i:17;a:26:{s:6:"title#";i:1;s:5:"title";s:27:"Charts 4 PHP v2.0 Released!";s:5:"link#";i:1;s:4:"link";s:51:"http://www.chartphp.com/charts-4-php-v2-0-released/";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Mon, 23 Oct 2017 07:42:53 +0000";s:2:"dc";a:4:{s:8:"creator#";i:1;s:7:"creator";s:5:"Shani";s:8:"subject#";i:1;s:7:"subject";s:7:"Updates";}s:9:"category#";i:1;s:8:"category";s:7:"Updates";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:30:"http://www.chartphp.com/?p=792";s:12:"description#";i:1;s:11:"description";s:390:"Hello everyone! We&#8217;re back again with new updates! Charts 4 PHP v2.0 has been released with more exciting features. Create stunning and informative charts &#38; dashboards using our new charting library (based on D3.js). New fresh design with completely re-written data visualization library. Visualize your data via SQL database query. Added support for variety of back-end [&#8230;]";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:2401:"<p>Hello everyone!</p>
+<p>We&#8217;re back again with new updates! Charts 4 PHP v2.0 has been released with more exciting features.</p>
+<ul>
+<li>Create stunning and informative charts &amp; dashboards using our new charting library (based on D3.js).</li>
+<li>New fresh design with completely re-written data visualization library.</li>
+<li>Visualize your data via SQL database query.</li>
+<li>Added support for variety of back-end database engines.</li>
+<li>Option to have paid <a href="http://www.chartphp.com/contact/">consultancy services</a> for library integration and dashboard.</li>
+</ul>
+<p>Here are few screenshots of charts generated with our v2.0 API.<img class="alignnone size-full wp-image-797" src="http://www.chartphp.com/wp-content/uploads/bubble.png" alt="" width="100%" /></p>
+<p><img class="wp-image-794 alignnone" src="http://www.chartphp.com/wp-content/uploads/area.png" alt="" width="49%" /> <img class="wp-image-795 alignnone" src="http://www.chartphp.com/wp-content/uploads/bar.png" alt="" width="49%" /> <img class="wp-image-796 alignnone" src="http://www.chartphp.com/wp-content/uploads/bar-simple.png" alt="" width="49%" />  <img class="wp-image-801 alignnone" src="http://www.chartphp.com/wp-content/uploads/histo.png" alt="" width="49%" /> <img class="size-full wp-image-799 alignnone" src="http://www.chartphp.com/wp-content/uploads/donut.png" alt="" width="49%" /><img class="size-full wp-image-803 alignnone" src="http://www.chartphp.com/wp-content/uploads/pie.png" alt="" width="49%" /> <img class="wp-image-800 alignnone" src="http://www.chartphp.com/wp-content/uploads/heatmap.png" alt="" width="49%" />  <img class="wp-image-802 alignnone" src="http://www.chartphp.com/wp-content/uploads/line.png" alt="" width="49%" /></p>
+<p><img class="alignnone size-full wp-image-798" src="http://www.chartphp.com/wp-content/uploads/candlestick.png" alt="" width="1068" height="516" /></p>
+<p>For limited period, we&#8217;re providing free of cost update for customers bought within last 6 months.</p>
+<p><strong>Whats Next:</strong></p>
+<ul>
+<li>To download latest free version (with limited features), please visit our <a title="Download" href="http://www.chartphp.com/download/">Download page</a>.</li>
+<li>For existing paid customers who want to renew/upgrade, please visit <a href="http://www.chartphp.com/upgrade-subscription/">Upgrade page</a>.</li>
+</ul>
+<p>&nbsp;</p>
+";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:3:"792";s:8:"summary#";i:1;s:7:"summary";s:390:"Hello everyone! We&#8217;re back again with new updates! Charts 4 PHP v2.0 has been released with more exciting features. Create stunning and informative charts &#38; dashboards using our new charting library (based on D3.js). New fresh design with completely re-written data visualization library. Visualize your data via SQL database query. Added support for variety of back-end [&#8230;]";s:13:"atom_content#";i:1;s:12:"atom_content";s:2401:"<p>Hello everyone!</p>
+<p>We&#8217;re back again with new updates! Charts 4 PHP v2.0 has been released with more exciting features.</p>
+<ul>
+<li>Create stunning and informative charts &amp; dashboards using our new charting library (based on D3.js).</li>
+<li>New fresh design with completely re-written data visualization library.</li>
+<li>Visualize your data via SQL database query.</li>
+<li>Added support for variety of back-end database engines.</li>
+<li>Option to have paid <a href="http://www.chartphp.com/contact/">consultancy services</a> for library integration and dashboard.</li>
+</ul>
+<p>Here are few screenshots of charts generated with our v2.0 API.<img class="alignnone size-full wp-image-797" src="http://www.chartphp.com/wp-content/uploads/bubble.png" alt="" width="100%" /></p>
+<p><img class="wp-image-794 alignnone" src="http://www.chartphp.com/wp-content/uploads/area.png" alt="" width="49%" /> <img class="wp-image-795 alignnone" src="http://www.chartphp.com/wp-content/uploads/bar.png" alt="" width="49%" /> <img class="wp-image-796 alignnone" src="http://www.chartphp.com/wp-content/uploads/bar-simple.png" alt="" width="49%" />  <img class="wp-image-801 alignnone" src="http://www.chartphp.com/wp-content/uploads/histo.png" alt="" width="49%" /> <img class="size-full wp-image-799 alignnone" src="http://www.chartphp.com/wp-content/uploads/donut.png" alt="" width="49%" /><img class="size-full wp-image-803 alignnone" src="http://www.chartphp.com/wp-content/uploads/pie.png" alt="" width="49%" /> <img class="wp-image-800 alignnone" src="http://www.chartphp.com/wp-content/uploads/heatmap.png" alt="" width="49%" />  <img class="wp-image-802 alignnone" src="http://www.chartphp.com/wp-content/uploads/line.png" alt="" width="49%" /></p>
+<p><img class="alignnone size-full wp-image-798" src="http://www.chartphp.com/wp-content/uploads/candlestick.png" alt="" width="1068" height="516" /></p>
+<p>For limited period, we&#8217;re providing free of cost update for customers bought within last 6 months.</p>
+<p><strong>Whats Next:</strong></p>
+<ul>
+<li>To download latest free version (with limited features), please visit our <a title="Download" href="http://www.chartphp.com/download/">Download page</a>.</li>
+<li>For existing paid customers who want to renew/upgrade, please visit <a href="http://www.chartphp.com/upgrade-subscription/">Upgrade page</a>.</li>
+</ul>
+<p>&nbsp;</p>
+";s:13:"category@term";s:7:"Updates";s:14:"date_timestamp";i:1508744573;}i:18;a:26:{s:6:"title#";i:1;s:5:"title";s:37:"Creating Dashboard  with Charts 4 PHP";s:5:"link#";i:1;s:4:"link";s:58:"http://www.chartphp.com/how-to-create-dashboard-php-mysql/";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Wed, 22 Apr 2015 09:11:53 +0000";s:2:"dc";a:4:{s:8:"creator#";i:1;s:7:"creator";s:5:"Shani";s:8:"subject#";i:1;s:7:"subject";s:13:"How-To Guides";}s:9:"category#";i:1;s:8:"category";s:13:"How-To Guides";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:30:"http://www.chartphp.com/?p=646";s:12:"description#";i:1;s:11:"description";s:549:"This article will show how to create a dashboard using Charts 4 PHP Framework with or without database (mySQL, Oracle, PDO etc.) at back end. I. Creating first chart in Dashboard Step 1: Configure Database connectivity in config.php define("CHARTPHP_DBTYPE","pdo"); define("CHARTPHP_DBHOST","sqlite:../../sampledb/Northwind.db"); define("CHARTPHP_DBUSER",""); define("CHARTPHP_DBPASS",""); define("CHARTPHP_DBNAME",""); Step 2: Include Charts 4 PHP Library in Dashboard HTML include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); [&#8230;]";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:4128:"<p>This article will show how to create a dashboard using Charts 4 PHP Framework with or without database (mySQL, Oracle, PDO etc.) at back end.</p>
+<p><strong>I. Creating first chart in Dashboard</strong></p>
+<p><strong>Step 1: Configure Database connectivity in config.php</strong></p>
+<pre>define("CHARTPHP_DBTYPE","pdo");
+define("CHARTPHP_DBHOST","sqlite:../../sampledb/Northwind.db");
+define("CHARTPHP_DBUSER","");
+define("CHARTPHP_DBPASS","");
+define("CHARTPHP_DBNAME","");
+</pre>
+<p><strong>Step 2: Include Charts 4 PHP Library in Dashboard HTML</strong></p>
+<pre>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</pre>
+<p><strong>Step 3: Select any one of the substep below to configure Data Array</strong></p>
+<p><em><strong>Step 3a: Configure Data array</strong></em></p>
+<pre>$p-&gt;data = array(array(
+array('Heavy Industry', 12),
+array('Retail', 9), 
+array('Light Industry', 14), 
+array('Out of home', 16),
+array('Commuting', 7), 
+array('Orientation', 9)));
+</pre>
+<p><em><strong>Step 3b: Configure Data array using jQuery to fetch data from Database (e.g. for SQLite DB)</strong></em></p>
+<pre>$p-&gt;data_sql = "select c.categoryname, sum(a.UnitPrice * a.Quantity) as Sales
+                from products b, `order details` a, categories c 
+                where a.productid = b.productid and c.categoryid = b.categoryid
+                    group by c.categoryid 
+                    order by c.categoryid";
+</pre>
+<p><strong>Step 4: Set Chart type</strong></p>
+<pre>$p-&gt;chart_type = "pie";
+</pre>
+<p><strong>Step 5: Render Chart</strong></p>
+<pre>$out = $p-&gt;render("c1");
+</pre>
+<p>This will give you a single chart in your dashboard something like this.</p>
+<p><a href="http://www.chartphp.com/wp-content/uploads/dashboard-sample-1.jpg"><img class="alignnone size-full wp-image-649" src="http://www.chartphp.com/wp-content/uploads/dashboard-sample-1.jpg" alt="Single Chart Dashboard Sample" width="600" height="312" srcset="http://www.chartphp.com/wp-content/uploads/dashboard-sample-1.jpg 600w, http://www.chartphp.com/wp-content/uploads/dashboard-sample-1-300x156.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p><strong>II. Creating multiple charts in your Dashboard</strong></p>
+<p><strong>Step 1: Configure multiple charts into your Dashboard HTML</strong></p>
+<pre>$p = new chartphp();
+$p-&gt;data = array(array(array("2010/10",48.25),array("2011/01",238.75),array("2011/02",95.50),array("2011/03",300.50),array("2011/04",286.80),array("2011/05",400)));
+$p-&gt;chart_type = "bar";
+$out_bar = $p-&gt;render('c2');
+
+$p = new chartphp();
+$p-&gt;data = array(array(array(60, 123, 1067, "Acura"), array(11, 92, 1236, "Alfa Romeo"), array(30, 200, 610, "AM General"), array(50, 23, 800, "Aston"), array(18, 17, 539, "Audi"), array(50, 89, 1026, "BMW"), array(99, 13, 864, "Bugatti")));
+$p-&gt;chart_type = "bubble";
+$out_bubble = $p-&gt;render('c3'); 
+
+$p = new chartphp();
+$p-&gt;intervals = array(200,300,400,600);
+$p-&gt;chart_type = "meter";
+$p-&gt;width = "200px";
+$p-&gt;height = "150px";
+$p-&gt;data = array(array(rand(200,600)));
+$out_meter = $p-&gt;render('c4'); 
+$p-&gt;data = array(array(rand(200,600)));
+$out_meter2 = $p-&gt;render('c41'); 
+$p-&gt;data = array(array(rand(200,600)));
+$out_meter3 = $p-&gt;render('c42'); 
+$p-&gt;data = array(array(rand(200,600)));
+$out_meter4 = $p-&gt;render('c43'); 
+</pre>
+<p><strong>Step 2: Render multiple charts in your dashboard to get the final look like this:</strong></p>
+<p><a href="http://www.chartphp.com/wp-content/uploads/dashboard-final.jpg"><img class="alignnone size-full wp-image-653" src="http://www.chartphp.com/wp-content/uploads/dashboard-final.jpg" alt="dashboard-final" width="600" height="417" srcset="http://www.chartphp.com/wp-content/uploads/dashboard-final.jpg 600w, http://www.chartphp.com/wp-content/uploads/dashboard-final-300x209.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p>&nbsp;</p>
+<p>For complete code, please visit live <a title="Dashboard Demo" href="http://www.chartphp.com/demo/apps/dashboard/" target="_blank">demo</a>.</p>
+";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:3:"646";s:8:"summary#";i:1;s:7:"summary";s:549:"This article will show how to create a dashboard using Charts 4 PHP Framework with or without database (mySQL, Oracle, PDO etc.) at back end. I. Creating first chart in Dashboard Step 1: Configure Database connectivity in config.php define("CHARTPHP_DBTYPE","pdo"); define("CHARTPHP_DBHOST","sqlite:../../sampledb/Northwind.db"); define("CHARTPHP_DBUSER",""); define("CHARTPHP_DBPASS",""); define("CHARTPHP_DBNAME",""); Step 2: Include Charts 4 PHP Library in Dashboard HTML include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); [&#8230;]";s:13:"atom_content#";i:1;s:12:"atom_content";s:4128:"<p>This article will show how to create a dashboard using Charts 4 PHP Framework with or without database (mySQL, Oracle, PDO etc.) at back end.</p>
+<p><strong>I. Creating first chart in Dashboard</strong></p>
+<p><strong>Step 1: Configure Database connectivity in config.php</strong></p>
+<pre>define("CHARTPHP_DBTYPE","pdo");
+define("CHARTPHP_DBHOST","sqlite:../../sampledb/Northwind.db");
+define("CHARTPHP_DBUSER","");
+define("CHARTPHP_DBPASS","");
+define("CHARTPHP_DBNAME","");
+</pre>
+<p><strong>Step 2: Include Charts 4 PHP Library in Dashboard HTML</strong></p>
+<pre>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</pre>
+<p><strong>Step 3: Select any one of the substep below to configure Data Array</strong></p>
+<p><em><strong>Step 3a: Configure Data array</strong></em></p>
+<pre>$p-&gt;data = array(array(
+array('Heavy Industry', 12),
+array('Retail', 9), 
+array('Light Industry', 14), 
+array('Out of home', 16),
+array('Commuting', 7), 
+array('Orientation', 9)));
+</pre>
+<p><em><strong>Step 3b: Configure Data array using jQuery to fetch data from Database (e.g. for SQLite DB)</strong></em></p>
+<pre>$p-&gt;data_sql = "select c.categoryname, sum(a.UnitPrice * a.Quantity) as Sales
+                from products b, `order details` a, categories c 
+                where a.productid = b.productid and c.categoryid = b.categoryid
+                    group by c.categoryid 
+                    order by c.categoryid";
+</pre>
+<p><strong>Step 4: Set Chart type</strong></p>
+<pre>$p-&gt;chart_type = "pie";
+</pre>
+<p><strong>Step 5: Render Chart</strong></p>
+<pre>$out = $p-&gt;render("c1");
+</pre>
+<p>This will give you a single chart in your dashboard something like this.</p>
+<p><a href="http://www.chartphp.com/wp-content/uploads/dashboard-sample-1.jpg"><img class="alignnone size-full wp-image-649" src="http://www.chartphp.com/wp-content/uploads/dashboard-sample-1.jpg" alt="Single Chart Dashboard Sample" width="600" height="312" srcset="http://www.chartphp.com/wp-content/uploads/dashboard-sample-1.jpg 600w, http://www.chartphp.com/wp-content/uploads/dashboard-sample-1-300x156.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p><strong>II. Creating multiple charts in your Dashboard</strong></p>
+<p><strong>Step 1: Configure multiple charts into your Dashboard HTML</strong></p>
+<pre>$p = new chartphp();
+$p-&gt;data = array(array(array("2010/10",48.25),array("2011/01",238.75),array("2011/02",95.50),array("2011/03",300.50),array("2011/04",286.80),array("2011/05",400)));
+$p-&gt;chart_type = "bar";
+$out_bar = $p-&gt;render('c2');
+
+$p = new chartphp();
+$p-&gt;data = array(array(array(60, 123, 1067, "Acura"), array(11, 92, 1236, "Alfa Romeo"), array(30, 200, 610, "AM General"), array(50, 23, 800, "Aston"), array(18, 17, 539, "Audi"), array(50, 89, 1026, "BMW"), array(99, 13, 864, "Bugatti")));
+$p-&gt;chart_type = "bubble";
+$out_bubble = $p-&gt;render('c3'); 
+
+$p = new chartphp();
+$p-&gt;intervals = array(200,300,400,600);
+$p-&gt;chart_type = "meter";
+$p-&gt;width = "200px";
+$p-&gt;height = "150px";
+$p-&gt;data = array(array(rand(200,600)));
+$out_meter = $p-&gt;render('c4'); 
+$p-&gt;data = array(array(rand(200,600)));
+$out_meter2 = $p-&gt;render('c41'); 
+$p-&gt;data = array(array(rand(200,600)));
+$out_meter3 = $p-&gt;render('c42'); 
+$p-&gt;data = array(array(rand(200,600)));
+$out_meter4 = $p-&gt;render('c43'); 
+</pre>
+<p><strong>Step 2: Render multiple charts in your dashboard to get the final look like this:</strong></p>
+<p><a href="http://www.chartphp.com/wp-content/uploads/dashboard-final.jpg"><img class="alignnone size-full wp-image-653" src="http://www.chartphp.com/wp-content/uploads/dashboard-final.jpg" alt="dashboard-final" width="600" height="417" srcset="http://www.chartphp.com/wp-content/uploads/dashboard-final.jpg 600w, http://www.chartphp.com/wp-content/uploads/dashboard-final-300x209.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p>&nbsp;</p>
+<p>For complete code, please visit live <a title="Dashboard Demo" href="http://www.chartphp.com/demo/apps/dashboard/" target="_blank">demo</a>.</p>
+";s:13:"category@term";s:13:"How-To Guides";s:14:"date_timestamp";i:1429693913;}i:19;a:26:{s:6:"title#";i:1;s:5:"title";s:33:"Creating a Funnel Chart using PHP";s:5:"link#";i:1;s:4:"link";s:55:"http://www.chartphp.com/how-to-create-funnel-chart-php/";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Wed, 01 Apr 2015 11:41:54 +0000";s:2:"dc";a:4:{s:8:"creator#";i:1;s:7:"creator";s:5:"Shani";s:8:"subject#";i:1;s:7:"subject";s:13:"How-To Guides";}s:9:"category#";i:1;s:8:"category";s:13:"How-To Guides";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:30:"http://www.chartphp.com/?p=582";s:12:"description#";i:1;s:11:"description";s:435:"This article will show how to create a simple funnel chart using Charts 4 PHP Framework. Step 1: Include Charts 4 PHP Library include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); Step 2: Configure Data array along with Intervals array $p->data = array(array( array('Heavy Industry', 12), array('Retail', 9), array('Light Industry', 14), array('Out of home', 16), array('Commuting', 7), array('Orientation', 9) )); [&#8230;]";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:834:"<p>This article will show how to create a simple funnel chart using Charts 4 PHP Framework.</p>
+<p><strong>Step 1: Include Charts 4 PHP Library</strong></p>
+<pre>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</pre>
+<p><strong>Step 2: Configure Data array along with Intervals array</strong></p>
+<pre>$p->data = array(array(
+array('Heavy Industry', 12),
+array('Retail', 9), 
+array('Light Industry', 14), 
+array('Out of home', 16),
+array('Commuting', 7), 
+array('Orientation', 9)
+));
+</pre>
+<p><strong>Step 3: Set Chart type</strong></p>
+<pre>$p->chart_type = "funnel";
+</pre>
+<p><strong>Step 4: Render Chart</strong></p>
+<pre>$out = $p->render("c1");
+</pre>
+<p>For complete code, please visit live <a title="Line Chart" href="http://www.chartphp.com/demo/#basic/funnel.php" target="_blank">demo</a>.</p>
+";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:3:"582";s:8:"summary#";i:1;s:7:"summary";s:435:"This article will show how to create a simple funnel chart using Charts 4 PHP Framework. Step 1: Include Charts 4 PHP Library include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); Step 2: Configure Data array along with Intervals array $p->data = array(array( array('Heavy Industry', 12), array('Retail', 9), array('Light Industry', 14), array('Out of home', 16), array('Commuting', 7), array('Orientation', 9) )); [&#8230;]";s:13:"atom_content#";i:1;s:12:"atom_content";s:834:"<p>This article will show how to create a simple funnel chart using Charts 4 PHP Framework.</p>
+<p><strong>Step 1: Include Charts 4 PHP Library</strong></p>
+<pre>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</pre>
+<p><strong>Step 2: Configure Data array along with Intervals array</strong></p>
+<pre>$p->data = array(array(
+array('Heavy Industry', 12),
+array('Retail', 9), 
+array('Light Industry', 14), 
+array('Out of home', 16),
+array('Commuting', 7), 
+array('Orientation', 9)
+));
+</pre>
+<p><strong>Step 3: Set Chart type</strong></p>
+<pre>$p->chart_type = "funnel";
+</pre>
+<p><strong>Step 4: Render Chart</strong></p>
+<pre>$out = $p->render("c1");
+</pre>
+<p>For complete code, please visit live <a title="Line Chart" href="http://www.chartphp.com/demo/#basic/funnel.php" target="_blank">demo</a>.</p>
+";s:13:"category@term";s:13:"How-To Guides";s:14:"date_timestamp";i:1427888514;}i:20;a:26:{s:6:"title#";i:1;s:5:"title";s:32:"Creating a Meter Chart using PHP";s:5:"link#";i:1;s:4:"link";s:60:"http://www.chartphp.com/how-to-create-meter-gauge-chart-php/";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Mon, 30 Mar 2015 20:07:58 +0000";s:2:"dc";a:4:{s:8:"creator#";i:1;s:7:"creator";s:5:"Shani";s:8:"subject#";i:1;s:7:"subject";s:13:"How-To Guides";}s:9:"category#";i:1;s:8:"category";s:13:"How-To Guides";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:30:"http://www.chartphp.com/?p=553";s:12:"description#";i:1;s:11:"description";s:402:"This article will show how to create a simple meter chart using Charts 4 PHP Framework. Step 1: Include Charts 4 PHP Library include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); Step 2: Configure Data array along with Intervals array $p->data = array(array(266)); $p->intervals = array(200,300,400,600); Step 3: Set Chart type $p->chart_type = "meter"; Step 4: Render Chart $out = [&#8230;]";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:715:"<p>This article will show how to create a simple meter chart using Charts 4 PHP Framework.</p>
+<p><strong>Step 1: Include Charts 4 PHP Library</strong></p>
+<pre>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</pre>
+<p><strong>Step 2: Configure Data array along with Intervals array</strong></p>
+<pre>$p->data = array(array(266)); 
+$p->intervals = array(200,300,400,600); 
+</pre>
+<p><strong>Step 3: Set Chart type</strong></p>
+<pre>$p->chart_type = "meter";
+</pre>
+<p><strong>Step 4: Render Chart</strong></p>
+<pre>$out = $p->render("c1");
+</pre>
+<p>For complete code, please visit live <a title="Line Chart" href="http://www.chartphp.com/demo/#basic/meter.php" target="_blank">demo</a>.</p>
+";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:3:"553";s:8:"summary#";i:1;s:7:"summary";s:402:"This article will show how to create a simple meter chart using Charts 4 PHP Framework. Step 1: Include Charts 4 PHP Library include("../../lib/inc/chartphp_dist.php"); $p = new chartphp(); Step 2: Configure Data array along with Intervals array $p->data = array(array(266)); $p->intervals = array(200,300,400,600); Step 3: Set Chart type $p->chart_type = "meter"; Step 4: Render Chart $out = [&#8230;]";s:13:"atom_content#";i:1;s:12:"atom_content";s:715:"<p>This article will show how to create a simple meter chart using Charts 4 PHP Framework.</p>
+<p><strong>Step 1: Include Charts 4 PHP Library</strong></p>
+<pre>include("../../lib/inc/chartphp_dist.php");
+$p = new chartphp();
+</pre>
+<p><strong>Step 2: Configure Data array along with Intervals array</strong></p>
+<pre>$p->data = array(array(266)); 
+$p->intervals = array(200,300,400,600); 
+</pre>
+<p><strong>Step 3: Set Chart type</strong></p>
+<pre>$p->chart_type = "meter";
+</pre>
+<p><strong>Step 4: Render Chart</strong></p>
+<pre>$out = $p->render("c1");
+</pre>
+<p>For complete code, please visit live <a title="Line Chart" href="http://www.chartphp.com/demo/#basic/meter.php" target="_blank">demo</a>.</p>
+";s:13:"category@term";s:13:"How-To Guides";s:14:"date_timestamp";i:1427746078;}i:21;a:30:{s:6:"title#";i:1;s:5:"title";s:27:"Social Network Pages added!";s:5:"link#";i:1;s:4:"link";s:51:"http://www.chartphp.com/social-network-pages-added/";s:9:"comments#";i:1;s:8:"comments";s:59:"http://www.chartphp.com/social-network-pages-added/#respond";s:8:"pubdate#";i:1;s:7:"pubdate";s:31:"Wed, 04 Mar 2015 08:29:19 +0000";s:2:"dc";a:4:{s:8:"creator#";i:1;s:7:"creator";s:5:"Shani";s:8:"subject#";i:1;s:7:"subject";s:7:"Updates";}s:9:"category#";i:1;s:8:"category";s:7:"Updates";s:5:"guid#";i:1;s:5:"guid@";s:11:"ispermalink";s:16:"guid@ispermalink";s:5:"false";s:4:"guid";s:30:"http://www.chartphp.com/?p=281";s:12:"description#";i:1;s:11:"description";s:169:"Greetings everyone! Now you can catch our product updates on your favorite social portals! Please follow us on your favorite social network using links in footer. &#160;";s:7:"content";a:2:{s:8:"encoded#";i:1;s:7:"encoded";s:308:"<p>Greetings everyone!</p>
+<p>Now you can catch our product updates on your favorite social portals! Please follow us on your favorite social network using links in footer.</p>
+<p>&nbsp;<br />
+<img src="http://www.chartphp.com/wp-content/uploads/Social-links-blog.jpg" alt="Charts 4 PHP Social Links" /></p>
+";}s:3:"wfw";a:2:{s:11:"commentrss#";i:1;s:10:"commentrss";s:56:"http://www.chartphp.com/social-network-pages-added/feed/";}s:5:"slash";a:2:{s:9:"comments#";i:1;s:8:"comments";s:1:"0";}s:8:"post-id#";i:1;s:8:"post-id@";s:5:"xmlns";s:13:"post-id@xmlns";s:30:"com-wordpress:feed-additions:1";s:7:"post-id";s:3:"281";s:8:"summary#";i:1;s:7:"summary";s:169:"Greetings everyone! Now you can catch our product updates on your favorite social portals! Please follow us on your favorite social network using links in footer. &#160;";s:13:"atom_content#";i:1;s:12:"atom_content";s:308:"<p>Greetings everyone!</p>
+<p>Now you can catch our product updates on your favorite social portals! Please follow us on your favorite social network using links in footer.</p>
+<p>&nbsp;<br />
+<img src="http://www.chartphp.com/wp-content/uploads/Social-links-blog.jpg" alt="Charts 4 PHP Social Links" /></p>
+";s:13:"category@term";s:7:"Updates";s:14:"date_timestamp";i:1425457759;}}s:7:"channel";a:22:{s:6:"title#";i:1;s:5:"title";s:22:"Free PHP Chart & Graph";s:4:"atom";a:5:{s:5:"link#";i:1;s:5:"link@";s:13:"href,rel,type";s:9:"link@href";s:29:"http://www.chartphp.com/feed/";s:8:"link@rel";s:4:"self";s:9:"link@type";s:19:"application/rss+xml";}s:5:"link#";i:1;s:4:"link";s:23:"http://www.chartphp.com";s:12:"description#";i:1;s:11:"description";s:46:"HTML5 Chart & Graph for Web & Mobile using PHP";s:14:"lastbuilddate#";i:1;s:13:"lastbuilddate";s:31:"Sat, 30 Jun 2018 11:32:32 +0000";s:9:"language#";i:1;s:8:"language";s:5:"en-US";s:2:"sy";a:4:{s:13:"updateperiod#";i:1;s:12:"updateperiod";s:6:"hourly";s:16:"updatefrequency#";i:1;s:15:"updatefrequency";s:1:"1";}s:10:"generator#";i:1;s:9:"generator";s:30:"https://wordpress.org/?v=4.9.6";s:5:"site#";i:1;s:5:"site@";s:5:"xmlns";s:10:"site@xmlns";s:30:"com-wordpress:feed-additions:1";s:4:"site";s:8:"85830749";s:8:"tagline#";i:1;s:7:"tagline";s:46:"HTML5 Chart & Graph for Web & Mobile using PHP";s:9:"subtitle#";i:1;s:8:"subtitle";s:46:"HTML5 Chart & Graph for Web & Mobile using PHP";}s:9:"textinput";a:0:{}s:5:"image";a:0:{}s:9:"feed_type";s:3:"RSS";s:12:"feed_version";s:3:"2.0";s:8:"encoding";s:10:"ISO-8859-1";s:16:"_source_encoding";s:0:"";s:5:"ERROR";s:0:"";s:7:"WARNING";s:0:"";s:24:"_ATOM_CONTENT_CONSTRUCTS";a:8:{i:0;s:7:"content";i:1;s:7:"summary";i:2;s:5:"title";i:3;s:4:"info";i:4;s:7:"tagline";i:5;s:9:"copyright";i:6;s:6:"rights";i:7;s:8:"subtitle";}s:25:"_XHTML_CONTENT_CONSTRUCTS";a:2:{i:0;s:4:"body";i:1;s:3:"div";}s:16:"_KNOWN_ENCODINGS";a:3:{i:0;s:5:"UTF-8";i:1;s:8:"US-ASCII";i:2;s:10:"ISO-8859-1";}s:5:"stack";a:0:{}s:9:"inchannel";b:0;s:6:"initem";b:0;s:9:"incontent";a:0:{}s:11:"exclude_top";b:0;s:11:"intextinput";b:0;s:7:"inimage";b:0;s:17:"current_namespace";b:0;s:16:"current_category";i:0;s:13:"last_modified";s:31:"Sat, 30 Jun 2018 11:32:32 GMT
+";s:4:"etag";s:36:""554d3d94ff6f2a5f9c37c9aa9269ca04"
+";}
